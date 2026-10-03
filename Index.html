@@ -38,7 +38,7 @@
             margin: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -79,14 +79,67 @@
             margin-top: 0;
             font-size: 1.8rem;
         }
-        .product-placeholder {
-            background: #f4f9fc; /* Softest ocean-mist blue fill */
-            padding: 30px;
-            border-radius: 12px;
+        
+        /* New Product Grid Styles */
+        .section-title {
             text-align: center;
-            border: 2px dashed #b2daf4; /* Sky blue dashed border */
-            color: #556b87;
+            margin: 50px 0 30px 0;
+            color: #212c42;
+            font-size: 2rem;
         }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #eef2f5;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(43, 58, 85, 0.04);
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(43, 58, 85, 0.08);
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 180px;
+            background: #f4f9fc;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b2daf4;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .product-card h3 {
+            color: #212c42;
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+        }
+        .product-card p {
+            font-size: 0.95rem;
+            color: #556b87;
+            margin: 0 0 20px 0;
+        }
+        .product-tag {
+            display: inline-block;
+            background: #eef7f6;
+            color: #2bb673;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
         .highlight-text {
             color: #2bb673; /* Vibrant but gentle sensory green for key highlights */
             font-weight: 600;
@@ -132,7 +185,7 @@
             
             <p><strong>But there was another problem.</strong></p>
             <p>Finding the right sensory tools was a nightmare.</p>
-            <p>There snowballed so many products, so many different websites and so much information to work through. It was difficult to know what was genuinely useful, what might suit his needs and where to even begin.</p>
+            <p>There were so many products, so many different websites and so much information to work through. It was difficult to know what was genuinely useful, what might suit his needs and where to even begin.</p>
             
             <p>My son is now an adult.</p>
             <p>But I haven't forgotten how it felt to be the parent searching for answers, trying to find something — anything — that might make life a little easier.</p>
@@ -160,15 +213,25 @@
             </div>
         </section>
 
-        <!-- Product Preview Section -->
-        <section>
-            <h2>Our Sensory Collection</h2>
-            <div class="product-placeholder">
-                <p>✨ Our warm and welcoming online shop is currently being prepared with love.</p>
-                <p>Soon you will find our range of carefully chosen sensory tools, toys, and comforts here.</p>
+        <!-- Brand New Product Collection Section -->
+        <h2 class="section-title">Our Sensory Collection</h2>
+        <div class="product-grid">
+            
+            <!-- Card 1 -->
+            <div class="product-card">
+                <div class="image-placeholder">🍃</div>
+                <span class="product-tag">Calm & Regulate</span>
+                <h3>Tactile Comforts</h3>
+                <p>Thoughtfully textured weights, blankets, and grounding mats designed to soothe an overwhelmed nervous system and bring instant comfort.</p>
             </div>
-        </section>
-    </div>
 
-</body>
-</html>
+            <!-- Card 2 -->
+            <div class="product-card">
+                <div class="image-placeholder">✨</div>
+                <span class="product-tag">Focus & Clarity</span>
+                <h3>Quiet Fidgets & Tools</h3>
+                <p>Silent, satisfying tools designed to keep hands busy and busy minds focused, without causing a distraction in classrooms or workplaces.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card">
