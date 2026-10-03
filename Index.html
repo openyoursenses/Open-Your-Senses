@@ -88,6 +88,7 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            margin-bottom: 40px;
         }
         @media (min-width: 768px) {
             .product-flex {
@@ -122,13 +123,43 @@
             letter-spacing: 0.5px;
             margin-bottom: 10px;
         }
-        .item-list {
-            padding-left: 20px;
-            margin-top: 15px;
+        
+        /* Tool Details Breakdown Grid */
+        .benefits-title {
+            color: #212c42;
+            margin: 30px 0 20px 0;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 10px;
         }
-        .item-list li {
-            margin-bottom: 8px;
+        .item-breakdown {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
+        .item-row {
+            background: #ffffff;
+            border: 1px solid #eef2f5;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .item-row h4 {
+            margin: 0 0 10px 0;
+            color: #212c42;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .setting-tag {
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .tag-school { background: #eef7f6; color: #2bb673; }
+        .tag-home { background: #fff5eb; color: #ff9f43; }
+        .tag-care { background: #f0f3ff; color: #4ba3e3; }
         
         .highlight-text {
             color: #2bb673;
@@ -202,30 +233,24 @@
             </div>
         </section>
 
-        <!-- Featured Product Showcase Section -->
+        <!-- Curated Product Showcase Section -->
         <h2>Our Sensory Box Collections</h2>
         <section class="featured-product-card">
             <div class="product-flex">
                 <div class="product-image-box">
-                    <!-- ⚠️ REPLACE THIS FILE NAME WITH THE EXACT NAME OF YOUR BOX PHOTO -->
+                    <!-- Dynamically pulls your exact filename -->
                     <img src="Focus & Flow.png" alt="Focus and Flow Sensory Box">
                 </div>
                 <div class="product-details">
-                    <span class="product-tag">Featured Toolkit</span>
+                    <span class="product-tag">Curated Toolkit</span>
                     <h3>The Focus & Flow Box</h3>
-                    <p>Thoughtfully compiled to encourage concentration, ease restless energy, and provide quiet, therapeutic stimulation for active hands and busy minds.</p>
-                    <p><strong>What's inside your box:</strong></p>
-                    <ul class="item-list">
-                        <li><strong>Custom Cotton Canvas Pouch:</strong> Safely stores your favorite tools so you can carry comfort wherever you go.</li>
-                        <li><strong>Color-Changing Therapy Putty:</strong> Responds to warm touch, providing muscle-relaxing resistance and grounding tactile input.</li>
-                        <li><strong>Multi-Time Visual Hourglasses:</strong> Calming colorful sand timers to help naturally transition between tasks or practice gentle breath focus.</li>
-                        <li><strong>Pop-and-Learn Reading Tracker:</strong> An interactive tool to guide focus row by row while offering satisfying, quiet tactile clicks.</li>
-                        <li><strong>Smooth Texture Regulating Tools:</strong> A bright neon sphere and custom textured grip sleeve to help ground touch and direct restless physical energy safely.</li>
-                    </ul>
+                    <p>A beautifully balanced collection designed to encourage gentle concentration, ground restless energy, and provide quiet, comfortable focus across all stages of life.</p>
                 </div>
             </div>
-        </section>
-    </div>
 
-</body>
-</html>
+            <h3 class="benefits-title">💡 How Each Item Supports & Empowers:</h3>
+            <div class="item-breakdown">
+                
+                <!-- Item 1 -->
+                <div class="item-row">
+                    <h4>⏳ Visual Sand Timers 
