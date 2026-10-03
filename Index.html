@@ -8,20 +8,20 @@
         /* Relaxing sensory colors matched directly to your logo */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff; /* Crisp, clean white background from the logo */
-            color: #2b3a55; /* Calming dark navy from your main logo text */
+            background-color: #ffffff;
+            color: #2b3a55;
             line-height: 1.7;
             margin: 0;
             padding: 0;
         }
         header {
-            background: linear-gradient(135deg, #eef7f6 0%, #e8f0fe 100%); /* Ultra-soft teal and blue gradient cloud background */
+            background: linear-gradient(135deg, #eef7f6 0%, #e8f0fe 100%);
             text-align: center;
             padding: 40px 20px;
-            border-bottom: 3px solid #7cc576; /* Gentle leaf green bottom border */
+            border-bottom: 3px solid #7cc576;
         }
         .logo-container {
-            max-width: 320px; /* Limits the logo to a gentle, clear size */
+            max-width: 320px;
             margin: 0 auto 15px auto;
         }
         .logo-container img {
@@ -30,7 +30,7 @@
             display: block;
         }
         .tagline {
-            color: #4ba3e3; /* Soothing sky blue from the logo text below */
+            color: #4ba3e3;
             font-size: 1.3rem;
             font-weight: 500;
             text-transform: uppercase;
@@ -42,20 +42,23 @@
             margin: 40px auto;
             padding: 0 20px;
         }
-        .welcome-card, .about-card {
+        .welcome-card, .about-card, .featured-product-card {
             background: #ffffff;
             padding: 40px;
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(43, 58, 85, 0.06); 
             margin-bottom: 40px;
         }
-        /* Beautiful gradient side-borders using your signature logo colors */
         .welcome-card {
-            border-left: 6px solid #3fa9f5; /* Sky Blue accent */
+            border-left: 6px solid #3fa9f5;
         }
         .about-card {
-            border-left: 6px solid #7cc576; /* Gentle Green accent */
-            background-color: #fafdfb; /* Softest hint of mint green background */
+            border-left: 6px solid #7cc576;
+            background-color: #fafdfb;
+        }
+        .featured-product-card {
+            border-left: 6px solid #4ba3e3;
+            background-color: #f7faff;
         }
         .about-card p {
             margin-bottom: 18px;
@@ -80,68 +83,55 @@
             font-size: 1.8rem;
         }
         
-        /* New Product Grid Styles */
-        .section-title {
-            text-align: center;
-            margin: 50px 0 30px 0;
-            color: #212c42;
-            font-size: 2rem;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-        .product-card {
-            background: #ffffff;
-            border: 1px solid #eef2f5;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 15px rgba(43, 58, 85, 0.04);
-            text-align: center;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(43, 58, 85, 0.08);
-        }
-        .image-placeholder {
-            width: 100%;
-            height: 180px;
-            background: #f4f9fc;
-            border-radius: 12px;
+        /* Featured Product Layout */
+        .product-flex {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #b2daf4;
-            font-size: 3rem;
-            margin-bottom: 20px;
+            flex-direction: column;
+            gap: 30px;
         }
-        .product-card h3 {
-            color: #212c42;
-            margin: 0 0 10px 0;
-            font-size: 1.3rem;
+        @media (min-width: 768px) {
+            .product-flex {
+                flex-direction: row;
+                align-items: center;
+            }
         }
-        .product-card p {
-            font-size: 0.95rem;
-            color: #556b87;
-            margin: 0 0 20px 0;
+        .product-image-box {
+            flex: 1;
+            max-width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .product-image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .product-details {
+            flex: 1.2;
         }
         .product-tag {
             display: inline-block;
-            background: #eef7f6;
-            color: #2bb673;
+            background: #eaf4fc;
+            color: #3fa9f5;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .item-list {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+        .item-list li {
+            margin-bottom: 8px;
         }
         
         .highlight-text {
-            color: #2bb673; /* Vibrant but gentle sensory green for key highlights */
+            color: #2bb673;
             font-weight: 600;
         }
         .closing-tagline {
@@ -174,7 +164,6 @@
         <!-- Your Beautiful Story Section -->
         <section class="about-card">
             <h2>Why I created Open Your Senses</h2>
-            
             <p>Open Your Senses started with my son.</p>
             <p>He has Asperger's, and school was incredibly difficult for him.</p>
             <p>For years, I felt like I was trying to explain something that nobody was really hearing.</p>
@@ -213,25 +202,30 @@
             </div>
         </section>
 
-        <!-- Brand New Product Collection Section -->
-        <h2 class="section-title">Our Sensory Collection</h2>
-        <div class="product-grid">
-            
-            <!-- Card 1 -->
-            <div class="product-card">
-                <div class="image-placeholder">🍃</div>
-                <span class="product-tag">Calm & Regulate</span>
-                <h3>Tactile Comforts</h3>
-                <p>Thoughtfully textured weights, blankets, and grounding mats designed to soothe an overwhelmed nervous system and bring instant comfort.</p>
+        <!-- Featured Product Showcase Section -->
+        <h2>Our Sensory Box Collections</h2>
+        <section class="featured-product-card">
+            <div class="product-flex">
+                <div class="product-image-box">
+                    <!-- ⚠️ REPLACE THIS FILE NAME WITH THE EXACT NAME OF YOUR BOX PHOTO -->
+                    <img src="YOUR-BOX-IMAGE-NAME.jpg" alt="Focus and Flow Sensory Box">
+                </div>
+                <div class="product-details">
+                    <span class="product-tag">Featured Toolkit</span>
+                    <h3>The Focus & Flow Box</h3>
+                    <p>Thoughtfully compiled to encourage concentration, ease restless energy, and provide quiet, therapeutic stimulation for active hands and busy minds.</p>
+                    <p><strong>What's inside your box:</strong></p>
+                    <ul class="item-list">
+                        <li><strong>Custom Cotton Canvas Pouch:</strong> Safely stores your favorite tools so you can carry comfort wherever you go.</li>
+                        <li><strong>Color-Changing Therapy Putty:</strong> Responds to warm touch, providing muscle-relaxing resistance and grounding tactile input.</li>
+                        <li><strong>Multi-Time Visual Hourglasses:</strong> Calming colorful sand timers to help naturally transition between tasks or practice gentle breath focus.</li>
+                        <li><strong>Pop-and-Learn Reading Tracker:</strong> An interactive tool to guide focus row by row while offering satisfying, quiet tactile clicks.</li>
+                        <li><strong>Smooth Texture Regulating Tools:</strong> A bright neon sphere and custom textured grip sleeve to help ground touch and direct restless physical energy safely.</li>
+                    </ul>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <!-- Card 2 -->
-            <div class="product-card">
-                <div class="image-placeholder">✨</div>
-                <span class="product-tag">Focus & Clarity</span>
-                <h3>Quiet Fidgets & Tools</h3>
-                <p>Silent, satisfying tools designed to keep hands busy and busy minds focused, without causing a distraction in classrooms or workplaces.</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="product-card">
+</body>
+</html>
