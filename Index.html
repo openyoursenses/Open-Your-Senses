@@ -1,78 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Your Senses</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
-    header { background: linear-gradient(90deg, #4CAF50, #2196F3); color: white; padding: 20px; text-align: center; }
-    nav { text-align: center; padding: 10px; background: #fff; }
-    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
-    .hero { padding: 40px; text-align: center; }
-    .hero h1 { font-size: 2.5em; }
-    .section { padding: 30px; }
-    .products { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-    .card { background: white; padding: 20px; border-radius: 10px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background: #333; color: white; text-align: center; padding: 15px; }
-    button { background: #2196F3; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Your Senses | Sensory Shop</title>
+    <style>
+        /* Relaxing sensory colors matched directly to your logo */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff; /* Crisp, clean white background from the logo */
+            color: #2b3a55; /* Calming dark navy from your main logo text */
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #eef7f6 0%, #e8f0fe 100%); /* Ultra-soft teal and blue gradient cloud background */
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #7cc576; /* Gentle leaf green bottom border */
+        }
+        .logo-container {
+            max-width: 320px; /* Limits the logo to a gentle, clear size */
+            margin: 0 auto 15px auto;
+        }
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .tagline {
+            color: #4ba3e3; /* Soothing sky blue from the logo text below */
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .welcome-card, .about-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(43, 58, 85, 0.06); 
+            margin-bottom: 40px;
+        }
+        /* Beautiful gradient side-borders using your signature logo colors */
+        .welcome-card {
+            border-left: 6px solid #3fa9f5; /* Sky Blue accent */
+        }
+        .about-card {
+            border-left: 6px solid #7cc576; /* Gentle Green accent */
+            background-color: #fafdfb; /* Softest hint of mint green background */
+        }
+        .about-card p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+        .quote-block {
+            background-color: #f4f9fc;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 4px solid #4ba3e3;
+        }
+        .quote-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #212c42;
+            margin: 5px 0;
+        }
+        h2 {
+            color: #212c42;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .product-placeholder {
+            background: #f4f9fc; /* Softest ocean-mist blue fill */
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px dashed #b2daf4; /* Sky blue dashed border */
+            color: #556b87;
+        }
+        .highlight-text {
+            color: #2bb673; /* Vibrant but gentle sensory green for key highlights */
+            font-weight: 600;
+        }
+        .closing-tagline {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #4a5c50;
+            margin-top: 30px;
+            border-top: 1px dashed #d1c9bc;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Open Your Senses</h1>
-  <p>Where Everyone Belongs</p>
-</header>
+    <header>
+        <div class="logo-container">
+            <img src="Open Your Senses Logo.png" alt="Open Your Senses Logo">
+        </div>
+        <p class="tagline">Where Everyone Belongs</p>
+    </header>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#products">Shop</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <div class="container">
+        <!-- Welcome Card Section -->
+        <section class="welcome-card">
+            <h2>Welcome, friend. We're so glad you're here.</h2>
+            <p>Whether you are looking for a little bit of calm in a busy world, tools to help you focus, or the perfect sensory support for someone you love—you are in a safe, understanding space.</p>
+            <p>Take your time, explore at your own pace, and <span class="highlight-text">find what feels right for you</span>.</p>
+        </section>
 
-<section class="hero">
-  <h1>Sensory Toys & Calm Kits</h1>
-  <p>Designed to support calm, focus, and inclusion for every child.</p>
-  <button>Shop Now</button>
-</section>
+        <!-- Your Beautiful Story Section -->
+        <section class="about-card">
+            <h2>Why I created Open Your Senses</h2>
+            
+            <p>Open Your Senses started with my son.</p>
+            <p>He has Asperger's, and school was incredibly difficult for him.</p>
+            <p>For years, I felt like I was trying to explain something that nobody was really hearing.</p>
+            <p>I repeatedly asked for him to be assessed because I could see that he was struggling. But again and again, I was told that he didn't meet the criteria.</p>
+            <p>Three long years later, we finally had an answer: Asperger's.</p>
+            <p>An answer didn't suddenly make everything easy, but it helped us understand him.</p>
+            <p>We worked hard to find the right educational setting and, along the way, began discovering the things that could help him feel more comfortable, regulated and able to navigate the world around him.</p>
+            
+            <p><strong>But there was another problem.</strong></p>
+            <p>Finding the right sensory tools was a nightmare.</p>
+            <p>There snowballed so many products, so many different websites and so much information to work through. It was difficult to know what was genuinely useful, what might suit his needs and where to even begin.</p>
+            
+            <p>My son is now an adult.</p>
+            <p>But I haven't forgotten how it felt to be the parent searching for answers, trying to find something — anything — that might make life a little easier.</p>
+            <p>That's why I created Open Your Senses.</p>
+            <p>I wanted to create the place I wish I'd had back then.</p>
+            <p>A place where parents, carers, teachers, therapists, professionals and individuals can come to explore sensory tools and experiences without feeling overwhelmed.</p>
+            <p>A place where you don't have to be an expert. </p>
+            <p>A place where different needs are understood and respected.</p>
+            
+            <div class="quote-block">
+                <p>And a place where someone can simply say:</p>
+                <p class="quote-text">“I'm not sure what I need. Can you help me?”</p>
+                <p>And the answer is:</p>
+                <p class="quote-text"><strong>“Of course.”</strong></p>
+            </div>
+            
+            <p>Because sensory needs don't belong to one age, one diagnosis or one type of person. They are part of being human.</p>
+            <p>From babies discovering the world around them, to children finding ways to regulate, adults finding focus and comfort, and older people reconnecting with familiar sights, sounds, textures and memories — there is always room to explore our senses.</p>
+            <p>I can't promise that we'll have the perfect answer for everyone. But I can promise that Open Your Senses will always start with understanding the person, not the label.</p>
+            <p>Because everyone deserves to be heard.</p>
+            
+            <div class="closing-tagline">
+                Open Your Senses<br>
+                <span class="highlight-text">Where everyone belongs.</span>
+            </div>
+        </section>
 
-<section id="products" class="section">
-  <h2 style="text-align:center;">Featured Products</h2>
-  <div class="products">
-    <div class="card">
-      <h3>Calm Down Kit</h3>
-      <p>Perfect for anxiety and focus support.</p>
-      <p><strong>£16.99</strong></p>
+        <!-- Product Preview Section -->
+        <section>
+            <h2>Our Sensory Collection</h2>
+            <div class="product-placeholder">
+                <p>✨ Our warm and welcoming online shop is currently being prepared with love.</p>
+                <p>Soon you will find our range of carefully chosen sensory tools, toys, and comforts here.</p>
+            </div>
+        </section>
     </div>
-    <div class="card">
-      <h3>Starter Sensory Pack</h3>
-      <p>Great introduction to sensory play.</p>
-      <p><strong>£13.99</strong></p>
-    </div>
-    <div class="card">
-      <h3>Pocket Fidget Kit</h3>
-      <p>Compact and perfect for school or travel.</p>
-      <p><strong>£8.99</strong></p>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="section">
-  <h2>About Us</h2>
-  <p>Open Your Senses provides inclusive sensory products designed to help children feel calm, focused, and supported. Our mission is to create a space where every child feels they belong.</p>
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: 00000 000001</p>
-</section>
-
-<footer>
-  <p>© 2026 Open Your Senses</p>
-</footer>
 
 </body>
 </html>
