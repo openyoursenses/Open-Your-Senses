@@ -7,13 +7,14 @@
     
     <!-- Your Official Snipcart Integration Script -->
     <script>
-      window.SnipcartSettings = {
-        publicApiKey: 'YTU4ZWE5MTktZmUxMS00MmQyLWFkYWYtNDBlMzZlMWM1YWQ0NjM5MjY5MjE2MjQ3ODY3MTc0',
-        loadStrategy: 'immediate', // Changed to load instantly for better button response
-      };
-
-      (()=>{"use strict";var c,d;void 0===(d=window.SnipcartSettings||{})&&(window.SnipcartSettings={});const p=((e,t)=>{var n,a,o;const r=(null===(n=window.SnipcartSettings)||void 0===n?void 0:n.version)||"3.0";return(null===(a=window.SnipcartSettings)||void 0===a?void 0:a.timeoutDuration)||0===a.timeoutDuration?a.timeoutDuration:(null===(o=window.SnipcartSettings)||void 0===o?void 0:o.timeoutDuration)?o.timeoutDuration:2750})(0,0),u=["immediate","on-user-interaction","manual"],f=e=>{const t=document.createElement("script");t.src=e,t.async=!0,document.head.appendChild(t)},m=e=>{const t=document.createElement("link");t.rel="stylesheet",t.href=e,document.head.appendChild(t)},v=e=>{f(`https://snipcart.com{e}/default/snipcart.js`),m(`https://snipcart.com{e}/default/snipcart.css`)},s=((e,t)=>{var n;return(null===(n=window.SnipcartSettings)||void 0===n?void 0:n.loadStrategy)?window.SnipcartSettings.loadStrategy:u.includes(t)?t:"immediate"})(0,"immediate"),l=e=>{const t=(null==window?void 0:window.SnipcartSettings)||{},n=t.version||"3.0";v(n)};if("immediate"===s)l(0);else if("on-user-interaction"===s){const e=["mouseover","keydown","touchstart","scroll"];var a;const o=()=>{e.forEach((e=>document.removeEventListener(e,o))),l(0)};e.forEach((e=>document.addEventListener(e,o))),p>0&&setTimeout(o,p)}else"manual"===s&&(window.LoadSnipcart=()=>l(0))})();
-    </script>
+  window.SnipcartSettings = {
+    publicApiKey: 'YTU4ZWE5MTktZmUxMS00MmQyLWFkYWYtNDBlMzZlMWM1YWQ0NjM5MjY5MjE2MjQ3ODY3MTc0',
+    loadStrategy: 'immediate',
+    currency: 'gbp' // <-- ADD THIS LINE HERE
+  };
+  
+  // ... (keep the rest of the clean injection logic exactly the same)
+</script>
     <style>
         /* Relaxing sensory colors matched directly to your logo */
         body {
