@@ -6,96 +6,16 @@
     <title>Open Your Senses | Sensory Tools for Everyday Life</title>
     
     <!-- Snipcart v3 -->
-    <script>
-      window.SnipcartSettings = {
-        publicApiKey: "YTU4ZWE5MTktZmUxMS00MmQyLWFkYWYtNDBlMzZlMWM1YWQ0NjM5MjY5MjE2MjQ3ODY3MTc0",
-        loadStrategy: "on-user-interaction",
-        currency: "gbp"
-      };
+<script>
+  window.SnipcartSettings = {
+    publicApiKey: "YTU4ZWE5MTktZmUxMS00MmQyLWFkYWYtNDBlMzZlMWM1YWQ0NjM5MjY5MjE2MjQ3ODY3MTc0",
+    loadStrategy: "on-user-interaction",
+    currency: "gbp",
+    version: "3.7.1"
+  };
 
-      (() => {
-        var a, d;
-        (d = (a = window.SnipcartSettings).version) != null || (a.version = "3.0");
-        var s, S;
-        (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
-        var w, u;
-        (u = (w = window.SnipcartSettings).domain) != null || (w.domain = "cdn.snipcart.com");
-        var m, g;
-        (g = (m = window.SnipcartSettings).protocol) != null || (m.protocol = "https");
-
-        var y = window.SnipcartSettings.version.includes("v3.0.0-ci") ||
-          (window.SnipcartSettings.version != "3.0" &&
-           window.SnipcartSettings.version.localeCompare("3.4.0", void 0, {
-             numeric: true,
-             sensitivity: "base"
-           }) === -1);
-
-        var f = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
-        window.LoadSnipcart = o;
-        document.readyState === "loading"
-          ? document.addEventListener("DOMContentLoaded", r)
-          : r();
-
-        function r() {
-          if (window.SnipcartSettings.loadStrategy === "on-user-interaction") {
-            f.forEach(t => document.addEventListener(t, o));
-            setTimeout(o, window.SnipcartSettings.timeoutDuration);
-          } else {
-            o();
-          }
-        }
-
-        var c = false;
-
-        function o() {
-          if (c) return;
-          c = true;
-
-          let t = document.getElementsByTagName("head")[0];
-          let e = document.querySelector("#snipcart");
-          let i = document.querySelector(
-            `script[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`
-          );
-          let n = document.querySelector(
-            `link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`
-          );
-
-          if (!e) {
-            e = document.createElement("div");
-            e.id = "snipcart";
-            e.setAttribute("hidden", "true");
-            document.body.appendChild(e);
-          }
-
-          h(e);
-
-          if (!i) {
-            i = document.createElement("script");
-            i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`;
-            i.async = true;
-            t.appendChild(i);
-          }
-
-          if (!n) {
-            n = document.createElement("link");
-            n.rel = "stylesheet";
-            n.type = "text/css";
-            n.href = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`;
-            t.prepend(n);
-          }
-
-          f.forEach(v => document.removeEventListener(v, o));
-        }
-
-        function h(t) {
-          if (!y) return;
-          t.dataset.apiKey = window.SnipcartSettings.publicApiKey;
-          if (window.SnipcartSettings.currency) {
-            t.dataset.currency = window.SnipcartSettings.currency;
-          }
-        }
-      })();
-    </script>
+  (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+</script>
     <style>
         /* Relaxing sensory colors matched directly to your logo */
         body {
@@ -257,7 +177,7 @@
 
 <body>
 
-    <button class="snipcart-checkout">
+    <button type="button" class="snipcart-checkout">
     🛒 View Basket 
     <span class="snipcart-items-count">0</span>
 </button>
@@ -336,11 +256,11 @@
                             <span class="price-badge">£27.99</span>
                             <span class="stock-label">✓ In Stock</span>
                         </div>
-                         <button class="snipcart-add-item"
+                         <button type="button" class="snipcart-add-item"
                             data-item-id="focus-flow-box"
                             data-item-name="The Focus & Flow Box"
                             data-item-price="27.99"
-                            data-item-url="https://openyoursenses.co.uk"
+                            data-item-url="/"
                             data-item-description="Curated collection designed to encourage gentle concentration and focus.">
                             Add to Basket
                         </button>
@@ -391,11 +311,11 @@
                             <span class="price-badge">£32.99</span>
                             <span class="stock-label">✓ In Stock</span>
                         </div>
-                        <button class="snipcart-add-item"
+                        <button type="button" class="snipcart-add-item"
                             data-item-id="deep-regulation-box"
                             data-item-name="The Deep Regulation Box"
                             data-item-price="32.99"
-                            data-item-url="https://openyoursenses.co.uk"
+                            data-item-url="/"
                             data-item-description="Curated collection thoughtfully gathered to aid intense emotional decompression.">
                             Add to Basket
                         </button>
@@ -446,11 +366,11 @@
                             <span class="price-badge">£38.99</span>
                             <span class="stock-label">✓ In Stock</span>
                         </div>
-                       <button class="snipcart-add-item"
+                       <button type="button" class="snipcart-add-item"
                             data-item-id="discover-senses-box"
                             data-item-name="The Discover the Senses Box"
                             data-item-price="38.99"
-                            data-item-url="https://openyoursenses.co.uk"
+                            data-item-url="/"
                             data-item-description="A collection rich in textures, lights, and sounds for sensory discovery.">
                             Add to Basket
                         </button>
@@ -503,7 +423,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£17.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="weighted-bear" data-item-name="Grounding Weighted Bear" data-item-price="17.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Flat, distributed laptop weight to simulate a comforting hug.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="weighted-bear" data-item-name="Grounding Weighted Bear" data-item-price="17.99" data-item-url="/" data-item-description="Flat, distributed laptop weight to simulate a comforting hug.">Add to Basket</button>
                 </div>
             </div>
 
@@ -519,7 +439,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£17.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="weighted-panda" data-item-name="Grounding Weighted Panda" data-item-price="17.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Bold, high-contrast plush companion for deep pressure sensory support.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="weighted-panda" data-item-name="Grounding Weighted Panda" data-item-price="17.99" data-item-url="/" data-item-description="Bold, high-contrast plush companion for deep pressure sensory support.">Add to Basket</button>
                 </div>
             </div>
 
@@ -535,7 +455,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£4.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="lavender-sachet" data-item-name="Lavender Memory Sachet" data-item-price="4.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Pure botanical lavender sachet for comforting olfactory recall.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="lavender-sachet" data-item-name="Lavender Memory Sachet" data-item-price="4.99" data-item-url="/" data-item-description="Pure botanical lavender sachet for comforting olfactory recall.">Add to Basket</button>
                 </div>
             </div>
         </div>
@@ -554,7 +474,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£14.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="emotion-board" data-item-name="Visual Emotion Sliding Board" data-item-price="14.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Tactile sliding display board that removes verbal speech pressure.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="emotion-board" data-item-name="Visual Emotion Sliding Board" data-item-price="14.99" data-item-url="/" data-item-description="Tactile sliding display board that removes verbal speech pressure.">Add to Basket</button>
                 </div>
             </div>
 
@@ -570,7 +490,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£17.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="screw-board" data-item-name="Wooden Motor Screw Board" data-item-price="17.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Real mechanical tasks to build hand coordination and focus.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="screw-board" data-item-name="Wooden Motor Screw Board" data-item-price="17.99" data-item-url="/" data-item-description="Real mechanical tasks to build hand coordination and focus.">Add to Basket</button>
                 </div>
             </div>
 
@@ -586,7 +506,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£13.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="stone-puzzle" data-item-name="Rainbow Flat-Stone Puzzle" data-item-price="13.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Smooth stackable stone shapes for visually satisfying logic matching.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="stone-puzzle" data-item-name="Rainbow Flat-Stone Puzzle" data-item-price="13.99" data-item-url="/" data-item-description="Smooth stackable stone shapes for visually satisfying logic matching.">Add to Basket</button>
                 </div>
             </div>
 
@@ -602,7 +522,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£9.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="gel-picker" data-item-name="Zen Gel Stick Picker" data-item-price="9.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Redirects repetitive dermatological picking urges onto a safe gel pad.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="gel-picker" data-item-name="Zen Gel Stick Picker" data-item-price="9.99" data-item-url="/" data-item-description="Redirects repetitive dermatological picking urges onto a safe gel pad.">Add to Basket</button>
                 </div>
             </div>
             <!-- Item 8: Textured Phone Grip Strips -->
@@ -617,7 +537,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£5.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="phone-strips" data-item-name="Textured Phone Grip Strips" data-item-price="5.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Slim, patterned silicone strips for completely hidden tactile grounding.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="phone-strips" data-item-name="Textured Phone Grip Strips" data-item-price="5.99" data-item-url="/" data-item-description="Slim, patterned silicone strips for completely hidden tactile grounding.">Add to Basket</button>
                 </div>
             </div>
 
@@ -633,7 +553,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£5.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="chew-lanyard" data-item-name="Wearable Chewable Lanyard" data-item-price="5.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Chewable beads on a breakaway safety cord for sensory chewing.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="chew-lanyard" data-item-name="Wearable Chewable Lanyard" data-item-price="5.99" data-item-url="/" data-item-description="Chewable beads on a breakaway safety cord for sensory chewing.">Add to Basket</button>
                 </div>
             </div>
 
@@ -649,7 +569,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£21.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="body-sack" data-item-name="Dynamic Sensory Body Sack" data-item-price="21.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Stretchy, breathable Lycra sack that satisfies full-body proprioception.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="body-sack" data-item-name="Dynamic Sensory Body Sack" data-item-price="21.99" data-item-url="/" data-item-description="Stretchy, breathable Lycra sack that satisfies full-body proprioception.">Add to Basket</button>
                 </div>
             </div>
 
@@ -665,7 +585,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£3.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="pencil-topper" data-item-name="Sensory Pen & Pencil Topper" data-item-price="3.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Discreet silicone oral caps to protect standard writing instruments.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="pencil-topper" data-item-name="Sensory Pen & Pencil Topper" data-item-price="3.99" data-item-url="/" data-item-description="Discreet silicone oral caps to protect standard writing instruments.">Add to Basket</button>
                 </div>
             </div>
         </div>
@@ -684,7 +604,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£49.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="liquid-tiles" data-item-name="Dynamic Liquid Floor Tiles" data-item-price="49.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Slip-resistant cosmic gel panels that shift color with steps.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="liquid-tiles" data-item-name="Dynamic Liquid Floor Tiles" data-item-price="49.99" data-item-url="/" data-item-description="Slip-resistant cosmic gel panels that shift color with steps.">Add to Basket</button>
                 </div>
             </div>
 
@@ -700,7 +620,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£42.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="wall-panels" data-item-name="Textured Sensory Wall Panels" data-item-price="42.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Six multi-texture surfaces to explore touch and anchor pacing.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="wall-panels" data-item-name="Textured Sensory Wall Panels" data-item-price="42.99" data-item-url="/" data-item-description="Six multi-texture surfaces to explore touch and anchor pacing.">Add to Basket</button>
                 </div>
             </div>
 
@@ -716,7 +636,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£16.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="countdown-clock" data-item-name="Visual Rainbow Countdown Clock" data-item-price="16.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Silent, non-ticking timeline disk clock to make the passing of time easier to see.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="countdown-clock" data-item-name="Visual Rainbow Countdown Clock" data-item-price="16.99" data-item-url="/" data-item-description="Silent, non-ticking timeline disk clock to make the passing of time easier to see.">Add to Basket</button>
                 </div>
             </div>
 
@@ -732,7 +652,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£7.50</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="sensory-brush" data-item-name="Deep Pressure Sensory Brush" data-item-price="7.50" data-item-url="https://openyoursenses.co.uk" data-item-description="Firm, soft-bristled brush offering predictable tactile input.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="sensory-brush" data-item-name="Deep Pressure Sensory Brush" data-item-price="7.50" data-item-url="/" data-item-description="Firm, soft-bristled brush offering predictable tactile input.">Add to Basket</button>
                 </div>
             </div>
 
@@ -748,7 +668,7 @@
                 </div>
                 <div>
                     <span class="price-badge">£7.50</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="resistance-bands" data-item-name="Sensory Resistance Bands" data-item-price="7.50" data-item-url="https://openyoursenses.co.uk" data-item-description="High-stretch under-desk elastic lines for quiet active movement.">Add to Basket</button>
+                    <button type="button" class="snipcart-add-item" data-item-id="resistance-bands" data-item-name="Sensory Resistance Bands" data-item-price="7.50" data-item-url="/" data-item-description="High-stretch under-desk elastic lines for quiet active movement.">Add to Basket</button>
                 </div>
             </div>
         </div>
