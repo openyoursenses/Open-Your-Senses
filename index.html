@@ -3,17 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Your Senses | Sensory Shop</title>
+    <title>Open Your Senses | Sensory Tools for Everyday Life</title>
     
-    <!-- Your Official Snipcart Integration Script -->
+    <!-- Snipcart v3 -->
     <script>
       window.SnipcartSettings = {
-        publicApiKey: 'YTU4ZWE5MTktZmUxMS00MmQyLWFkYWYtNDBlMzZlMWM1YWQ0NjM5MjY5MjE2MjQ3ODY3MTc0',
-        loadStrategy: 'immediate',
-        currency: 'gbp'
+        publicApiKey: "YTU4ZWE5MTktZmUxMS00MmQyLWFkYWYtNDBlMzZlMWM1YWQ0NjM5MjY5MjE2MjQ3ODY3MTc0",
+        loadStrategy: "on-user-interaction",
+        currency: "gbp"
       };
 
-      (()=>{"use strict";var c,d;void 0===(d=window.SnipcartSettings||{})&&(window.SnipcartSettings={});const p=((e,t)=>{var n,a,o;const r=(null===(n=window.SnipcartSettings)||void 0===n?void 0:n.version)||"3.0";return(null===(a=window.SnipcartSettings)||void 0===a?void 0:a.timeoutDuration)||0===a.timeoutDuration?a.timeoutDuration:(null===(o=window.SnipcartSettings)||void 0===o?void 0:o.timeoutDuration)?o.timeoutDuration:2750})(0,0),u=["immediate","on-user-interaction","manual"],f=e=>{const t=document.createElement("script");t.src=e,t.async=!0,document.head.appendChild(t)},m=e=>{const t=document.createElement("link");t.rel="stylesheet",t.href=e,document.head.appendChild(t)},v=e=>{f(`https://snipcart.com{e}/default/snipcart.js`),m(`https://snipcart.com{e}/default/snipcart.css`)},s=((e,t)=>{var n;return(null===(n=window.SnipcartSettings)||void 0===n?void 0:n.loadStrategy)?window.SnipcartSettings.loadStrategy:u.includes(t)?t:"immediate"})(0,"immediate"),l=e=>{const t=(null==window?void 0:window.SnipcartSettings)||{},n=t.version||"3.0";v(n)};if("immediate"===s)l(0);else if("on-user-interaction"===s){const e=["mouseover","keydown","touchstart","scroll"];var a;const o=()=>{e.forEach((e=>document.removeEventListener(e,o))),l(0)};e.forEach((e=>document.addEventListener(e,o))),p>0&&setTimeout(o,p)}else"manual"===s&&(window.LoadSnipcart=()=>l(0))})();
+      (() => {
+        var a, d;
+        (d = (a = window.SnipcartSettings).version) != null || (a.version = "3.0");
+        var s, S;
+        (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
+        var w, u;
+        (u = (w = window.SnipcartSettings).domain) != null || (w.domain = "cdn.snipcart.com");
+        var m, g;
+        (g = (m = window.SnipcartSettings).protocol) != null || (m.protocol = "https");
+
+        var y = window.SnipcartSettings.version.includes("v3.0.0-ci") ||
+          (window.SnipcartSettings.version != "3.0" &&
+           window.SnipcartSettings.version.localeCompare("3.4.0", void 0, {
+             numeric: true,
+             sensitivity: "base"
+           }) === -1);
+
+        var f = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
+        window.LoadSnipcart = o;
+        document.readyState === "loading"
+          ? document.addEventListener("DOMContentLoaded", r)
+          : r();
+
+        function r() {
+          if (window.SnipcartSettings.loadStrategy === "on-user-interaction") {
+            f.forEach(t => document.addEventListener(t, o));
+            setTimeout(o, window.SnipcartSettings.timeoutDuration);
+          } else {
+            o();
+          }
+        }
+
+        var c = false;
+
+        function o() {
+          if (c) return;
+          c = true;
+
+          let t = document.getElementsByTagName("head")[0];
+          let e = document.querySelector("#snipcart");
+          let i = document.querySelector(
+            `script[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`
+          );
+          let n = document.querySelector(
+            `link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`
+          );
+
+          if (!e) {
+            e = document.createElement("div");
+            e.id = "snipcart";
+            e.setAttribute("hidden", "true");
+            document.body.appendChild(e);
+          }
+
+          h(e);
+
+          if (!i) {
+            i = document.createElement("script");
+            i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`;
+            i.async = true;
+            t.appendChild(i);
+          }
+
+          if (!n) {
+            n = document.createElement("link");
+            n.rel = "stylesheet";
+            n.type = "text/css";
+            n.href = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`;
+            t.prepend(n);
+          }
+
+          f.forEach(v => document.removeEventListener(v, o));
+        }
+
+        function h(t) {
+          if (!y) return;
+          t.dataset.apiKey = window.SnipcartSettings.publicApiKey;
+          if (window.SnipcartSettings.currency) {
+            t.dataset.currency = window.SnipcartSettings.currency;
+          }
+        }
+      })();
     </script>
     <style>
         /* Relaxing sensory colors matched directly to your logo */
@@ -125,6 +206,52 @@
         .submit-btn:hover { background: #23995f; }
         .highlight-text { color: #2bb673; font-weight: 600; }
         .closing-tagline { font-size: 1.2rem; font-weight: 600; color: #4a5c50; margin-top: 30px; border-top: 1px dashed #d1c9bc; padding-top: 20px; }
+
+        /* Warm, welcoming homepage hero */
+        .hero-intro {
+            text-align: center;
+            padding: 56px 40px 48px;
+            background: linear-gradient(135deg, #f8fcfb 0%, #f5f9ff 100%);
+            border-radius: 22px;
+            margin-bottom: 40px;
+            border: 1px solid #edf3f4;
+        }
+        .hero-intro h1 {
+            color: #212c42;
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.15;
+            margin: 0 0 18px;
+            font-weight: 650;
+        }
+        .hero-intro .hero-lead {
+            max-width: 720px;
+            margin: 0 auto 16px;
+            font-size: 1.2rem;
+            color: #4f627a;
+        }
+        .hero-intro .hero-gentle {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #61728a;
+        }
+        .hero-button {
+            display: inline-block;
+            background: #2bb673;
+            color: #fff;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 28px;
+            font-weight: 650;
+            box-shadow: 0 7px 18px rgba(43,118,115,0.14);
+            transition: transform .2s, box-shadow .2s;
+        }
+        .hero-button:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(43,118,115,0.18); }
+        .help-line { margin: 18px 0 0; font-size: .95rem; color: #65758a; }
+        .help-line a { color: #2b8f8a; font-weight: 600; text-decoration: none; }
+        @media (max-width: 600px) {
+            .hero-intro { padding: 38px 22px 34px; }
+            .hero-intro .hero-lead { font-size: 1.08rem; }
+        }
     </style>
 </head>
 
@@ -143,11 +270,13 @@
     </header>
 
     <div class="container">
-        <!-- Welcome Card Section -->
-        <section class="welcome-card">
-            <h2>Welcome, friend. We're so glad you're here.</h2>
-            <p>Whether you are looking for a little bit of calm in a busy world, tools to help you focus, or the perfect sensory support for someone you love—you are in a safe, understanding space.</p>
-            <p>Take your time, explore at your own pace, and <span class="highlight-text">find what feels right for you</span>.</p>
+        <!-- Welcome / Hero Section -->
+        <section class="hero-intro">
+            <h1>Sensory support for real life.</h1>
+            <p class="hero-lead">Thoughtfully chosen sensory tools for calm, focus, comfort, exploration and everyday moments when a little extra support can make a difference.</p>
+            <p class="hero-gentle">Whether you're looking for yourself, your child, a student, a family member or someone you care for, you're welcome here. You don't need to know exactly what you're looking for.</p>
+            <a class="hero-button" href="#collections">Explore our collections</a>
+            <p class="help-line">Not sure where to start? <a href="mailto:hello@openyoursenses.co.uk">Just ask. We're happy to help.</a></p>
         </section>
 
         <!-- Your Beautiful Story Section -->
@@ -162,14 +291,14 @@
             <p>We worked hard to find the right educational setting and, along the way, began discovering the things that could help him feel more comfortable, regulated and able to navigate the world around him.</p>
             
             <p><strong>But there was another problem.</strong></p>
-            <p>Finding the right sensory tools was a nightmare.</p>
-            <p>There were so many products, so many different websites and so much information to work through. It was difficult to know what was genuinely useful, what might suit his needs and where to even begin.</p>
+            <p>Finding the right sensory tools wasn't easy.</p>
+            <p>There were so many products, different websites and so much information to work through. It was difficult to know what might genuinely be useful, what might suit his needs and where to begin.</p>
             
             <p>My son is now an adult.</p>
             <p>But I haven't forgotten how it felt to be the parent searching for answers, trying to find something — anything — that might make life a little easier.</p>
             <p>That's why I created Open Your Senses.</p>
             <p>I wanted to create the place I wish I'd had back then.</p>
-            <p>A place where parents, carers, teachers, therapists, professionals and individuals can come to explore sensory tools and experiences without feeling overwhelmed.</p>
+            <p>A place where parents, carers, teachers, professionals and individuals can explore sensory tools and ideas without feeling overwhelmed.</p>
             <p>A place where you don't have to be an expert. </p>
             <p>A place where different needs are understood and respected.</p>
             
@@ -180,9 +309,9 @@
                 <p class="quote-text"><strong>“Of course.”</strong></p>
             </div>
             
-            <p>Because sensory needs don't belong to one age, one diagnosis or one type of person. They are part of being human.</p>
-            <p>From babies discovering the world around them, to children finding ways to regulate, adults finding focus and comfort, and older people reconnecting with familiar sights, sounds, textures and memories — there is always room to explore our senses.</p>
-            <p>I can't promise that we'll have the perfect answer for everyone. But I can promise that Open Your Senses will always start with understanding the person, not the label.</p>
+            <p>Because sensory needs don't belong to one age, one diagnosis or one type of person. We all experience the world through our senses.</p>
+            <p>From babies discovering the world around them, to children finding ways to feel comfortable and focused, adults looking for comfort or concentration, and older people enjoying familiar sights, sounds, textures and memories — there are so many ways our senses can support everyday life.</p>
+            <p>I can't promise that we'll have the perfect answer for everyone. What I can promise is that Open Your Senses will always start with the person, not the label.</p>
             <p>Because everyone deserves to be heard.</p>
             
             <div class="closing-tagline">
@@ -191,7 +320,7 @@
             </div>
         </section>
 
-        <h2>Our Sensory Box Collections</h2>
+        <h2 id="collections" class="section-title">Our Sensory Box Collections</h2>
         
          <!-- BOX 1: FOCUS & FLOW -->
         <section class="featured-product-card focus-box-card">
@@ -200,14 +329,13 @@
                 <div class="product-details">
                     <span class="product-tag tag-blue">Curated Toolkit</span>
                     <h3>The Focus & Flow Box</h3>
-                    <p>A beautifully balanced collection designed to encourage gentle concentration, ground restless energy, and provide quiet, comfortable focus across all stages of life.</p>
+                    <p>A thoughtfully chosen collection of simple sensory tools for quiet focus, hands-on exploration and moments when a little extra sensory support may be helpful.</p>
                     
                     <div class="box-buy-wrapper">
                         <div>
                             <span class="price-badge">£27.99</span>
                             <span class="stock-label">✓ In Stock</span>
                         </div>
-                      </button>
                          <button class="snipcart-add-item"
                             data-item-id="focus-flow-box"
                             data-item-name="The Focus & Flow Box"
@@ -219,32 +347,32 @@
                     </div>
                 </div>
             </div>
-            <h3 class="benefits-title">💡 How Each Item Supports & Empowers:</h3>
+            <h3 class="benefits-title">💡 A little more about each item:</h3>
             <div class="item-breakdown">
                 <div class="item-row">
                     <h4>⏳ Visual Sand Timers <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Provides a silent, non-threatening visual indicator of time moving, entirely removing the stress of ticking clocks or sudden, loud alarms.</p>
-                    <p><strong>How it helps:</strong> In classrooms or at home, it helps neurodivergent children transition between tasks seamlessly. For individuals living with dementia, the slow, rhythmic movement of the colored sand serves as a deeply soothing visual anchor that reduces anxiety and restlessness.</p>
+                    <p><strong>Why you might like it:</strong> A simple, silent way to see time passing without relying on a ticking clock or an alarm.</p>
+                    <p><strong>How it can be used:</strong> Useful at home, in classrooms or care settings when seeing time pass may make transitions feel more predictable.</p>
                 </div>
                 <div class="item-row">
                     <h4>✏️ Pencil Top Chewy <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-                    <p><strong>The Advantage:</strong> A highly discreet, completely silent oral-motor outlet that fits right onto a normal pencil, preventing chewing on clothes, fingers, or unsafe objects.</p>
-                    <p><strong>How it helps:</strong> Perfect for a classroom environment or during home study. It lets children process sensory overload right at their desks without distracting peers or standing out, aiding natural self-regulation.</p>
+                    <p><strong>Why you might like it:</strong> A discreet chewable topper designed to fit onto a pencil, offering an alternative to chewing on clothing, fingers or other objects.</p>
+                    <p><strong>How it can be used:</strong> Handy for school, homework or quiet activities when someone finds a chewable sensory option helpful.</p>
                 </div>
                 <div class="item-row">
                     <h4>🟢 Squeezy Tactile Ball <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Gives immediate physical feedback to hands, helping channel physical restlessness, anger, or nervous energy safely.</p>
-                    <p><strong>How it helps:</strong> Great for reducing daily stress at home. In dementia care settings, squeezing the soft ball keeps hands occupied, improves hand movement flexibility, and noticeably lowers localized agitation or confusion.</p>
+                    <p><strong>Why you might like it:</strong> A soft, squeezable texture that gives the hands something comfortable to do when someone needs movement or tactile input.</p>
+                    <p><strong>How it can be used:</strong> Suitable for quiet moments at home, school or care settings. Everyone responds differently, so simply see whether the texture feels comfortable and useful.</p>
                 </div>
                 <div class="item-row">
                     <h4>🎨 Therapy Putty <span class="setting-tag tag-school">School</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Offers deep tactile pressure and muscle resistance, which is excellent for strengthening fingers and comforting the nervous system.</p>
-                    <p><strong>How it helps:</strong> Helps children develop the fine motor skills needed for handwriting in school. For adults and older individuals, kneading the putty offers a peaceful, therapeutic exercise that relaxes tense muscles and provides calming grounding.</p>
+                    <p><strong>Why you might like it:</strong> A hands-on activity offering resistance and tactile feedback for squeezing, stretching and manipulating.</p>
+                    <p><strong>How it can be used:</strong> Useful for hands-on play, quiet fidgeting and fine-motor activities. It can also simply be an enjoyable way to keep hands busy.</p>
                 </div>
                 <div class="item-row">
                     <h4>🍓 Scratch & Sniff Scented Bookmark <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Activates the olfactory (smell) sense to pleasantly engage the mind, tie focus to positive sensations, and unlock memory pathways.</p>
-                    <p><strong>How it helps:</strong> Keeps reading time exciting and fresh for school children. In elder and memory care, familiar, sweet scents can gently unlock comforting memories, spark warm conversations, and bring a feeling of homeness.</p>
+                    <p><strong>Why you might like it:</strong> Adds scent to an everyday activity, giving the senses another way to explore and engage.</p>
+                    <p><strong>How it can be used:</strong> A fun addition to reading and sensory activities. Familiar scents may also prompt memories or conversation for some people, although responses to scent are very individual.</p>
                 </div>
             </div>
         </section>
@@ -256,7 +384,7 @@
                 <div class="product-details">
                     <span class="product-tag tag-green">Calm & Soothe</span>
                     <h3>The Deep Regulation Box</h3>
-                    <p>A collection thoughtfully gathered to aid intense emotional decompression, lower central nervous system overload, and bring profound neurological peace.</p>
+                    <p>A carefully chosen collection of sensory tools for moments when someone may benefit from quieter, more grounding activities and a change of sensory focus.</p>
                     
                     <div class="box-buy-wrapper">
                         <div>
@@ -274,31 +402,31 @@
                     </div>
                 </div>
             </div>
-            <h3 class="benefits-title">💡 How Each Item Supports & Empowers:</h3>
+            <h3 class="benefits-title">💡 A little more about each item:</h3>
             <div class="item-breakdown">
                 <div class="item-row">
                     <h4>🌪️ Liquid Vortex Tube <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Captures full visual attention with a slow, swirling fluid motion that acts like an instant manual reset for an overstimulated mind.</p>
-                    <p><strong>How it helps:</strong> Ideal for sensory break corners in school or home cool-down spaces. In dementia care, the mesmerizing movement offers gentle focus without text or numbers, greatly reducing evening sundowning anxiety.</p>
+                    <p><strong>Why you might like it:</strong> The slow movement and changing colours offer something simple and interesting to watch.</p>
+                    <p><strong>How it can be used:</strong> A lovely option for quiet corners, sensory breaks or relaxed visual exploration. It may be particularly appealing where simple, non-verbal activities are preferred.</p>
                 </div>
                 <div class="item-row">
-                    <h4>🎵 Therapeutic Sound Chime <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Emits a single, pure auditory frequency upon striking that vibrates cleanly, cutting through chaotic room noise without being harsh.</p>
-                    <p><strong>How it helps:</strong> Excellent for grounding during moments of meltdowns or deep distress at home. In elder care environments, the crystal-clear, acoustic tone serves as an organic auditory compass to gently prompt mindful breathing and restore harmony.</p>
+                    <h4>🎵 Sound Chime <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
+                    <p><strong>Why you might like it:</strong> Creates a clear, gentle sound that can become part of a calming routine or simply an enjoyable listening activity.</p>
+                    <p><strong>How it can be used:</strong> Try it as part of a quiet routine, listening activity or transition. Keep the sound comfortable for the person using it, particularly if they are sensitive to noise.</p>
                 </div>
                 <div class="item-row">
                     <h4>💆 Sensory Desensitization Brush <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Provides deep, even tactile input through steady pressure across the skin, helping individuals process physical touch limitations.</p>
-                    <p><strong>How it helps:</strong> Vital for neurodivergent children prior to transitions or high-stress school assemblies. For those managing tactile hypersensitivity, it provides structured, predictable input that leaves the user feeling safely anchored.</p>
+                    <p><strong>Why you might like it:</strong> Offers firm tactile input for people who enjoy predictable touch and pressure.</p>
+                    <p><strong>How it can be used:</strong> Some people enjoy firm, predictable sensory input before or during everyday activities. This type of tool isn't suitable for everyone, so follow the manufacturer's guidance and stop if it feels uncomfortable.</p>
                 </div>
                 <div class="item-row">
                     <h4>🍊 Scented Sensory Dough <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-                    <p><strong>The Advantage:</strong> Joins clean muscle building pull-resistance with fruity scent therapy, creating an enjoyable active connection.</p>
-                    <p><strong>How it helps:</strong> Fantastic for desks to keep hands moving quietly while absorbing school lessons. At home, the physical pulling combined with therapeutic aroma compounds releases healthy neurotransmitters that ease underlying tension.</p>
+                    <p><strong>Why you might like it:</strong> Combines hands-on stretching and moulding with a pleasant scent for a multi-sensory activity.</p>
+                    <p><strong>How it can be used:</strong> A fun hands-on activity for quiet play, sensory exploration or keeping hands busy.</p>
                 </div>
                 <div class="item-row">
                     <h4>🟢 Textured Bubble Fidget Strip <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-               <p><strong>The Advantage:</strong> A flexible, satisfying pocket companion lined with distinct surface textures and click-free pop elements for continuous tracking.</p>
+               <p><strong>Why you might like it:</strong> A flexible, satisfying pocket companion lined with distinct surface textures and click-free pop elements for continuous tracking.</p>
                     <p><strong>How it helps:</strong> Perfect for a pocket or sensory bag. It gives immediate tactile sensory satisfaction during bus rides, doctor visits, or waiting rooms, serving as an effective protective buffer against environmental overload.</p>
                 </div>
             </div>
@@ -329,32 +457,32 @@
                     </div>
                 </div>
             </div>
-            <h3 class="benefits-title">💡 How Each Item Supports & Empowers:</h3>
+            <h3 class="benefits-title">💡 A little more about each item:</h3>
             <div class="item-breakdown">
                 <div class="item-row">
                     <h4>🌟 Fiber Optic Light Wand <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Emits a soft, safe, glowing spray of lights that can be safely held and watched up close, creating gentle stimulation without glare.</p>
+                    <p><strong>Why you might like it:</strong> Emits a soft, safe, glowing spray of lights that can be safely held and watched up close, creating gentle stimulation without glare.</p>
                     <p><strong>How it helps:</strong> Captivates visual attention for young sensory explorers tracking movement. In senior care settings, the changing fibers offer a warm, soothing visual focus that brings comfort and calm to darker evening hours.</p>
                 </div>
                 <div class="item-row">
                     <h4>⏳ Wooden Rainmaker Bead Tube <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Combines a slow visual cascade of colorful beads with the realistic acoustic trickle sound of gentle rain when inverted.</p>
-                    <p><strong>How it helps:</strong> Great for sensory play or focusing attention in early development classrooms. In therapeutic memory care, the soft sound and fluid movement act as an immediate stress reliever, invoking serene, nostalgic associations.</p>
+                    <p><strong>Why you might like it:</strong> Combines a slow visual cascade of colorful beads with the realistic acoustic trickle sound of gentle rain when inverted.</p>
+                    <p><strong>How it helps:</strong> Great for sensory play, visual exploration and quiet activities. Some people may also enjoy the familiar rain-like sound and gentle movement.</p>
                 </div>
                 <div class="item-row">
                     <h4>🧜‍♀️ Reversible Sequin Fabric Pouch <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>The Advantage:</strong> Delivers high-contrast visual and distinct physical feedback as fingers glide across the surface to flip the shifting sequin colors.</p>
+                    <p><strong>Why you might like it:</strong> Delivers high-contrast visual and distinct physical feedback as fingers glide across the surface to flip the shifting sequin colors.</p>
                     <p><strong>How it helps:</strong> Keeps busy hands occupied at home for hours. For older adults experiencing agitation or dementia, running hands along the scales satisfies tactile patterns, reduces repetitive plucking behaviors, and anchors focus.</p>
                 </div>
                 <div class="item-row">
                     <h4>🧱 Brick-Style Oral Chewy <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-                    <p><strong>The Advantage:</strong> Features a raised block texture with a safe breakaway cord lanyard, giving substantial oral resistance safely away from clothing layers.</p>
+                    <p><strong>Why you might like it:</strong> Features a raised block texture with a safe breakaway cord lanyard, giving substantial oral resistance safely away from clothing layers.</p>
                     <p><strong>How it helps:</strong> Offers a reliable oral outlet for school children during intensive tasks, while acting as a grounding weight around the neck to help organize spatial body awareness.</p>
                 </div>
                 <div class="item-row">
                     <h4>🍉 Double Fruity Scented Dough <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-                    <p><strong>The Advantage:</strong> Pairs clean, highly-stretchable physical dough handling with two intense, bright fruit fragrance profiles.</p>
-                    <p><strong>How it helps:</strong> Excellent sensory exercise for motor manipulation. Smashing and rolling the dough keeps kids relaxed yet alert at their learning stations, making sensory exploration delightful and engaging.</p>
+                    <p><strong>Why you might like it:</strong> Pairs clean, highly-stretchable physical dough handling with two intense, bright fruit fragrance profiles.</p>
+                    <p><strong>How it helps:</strong> Excellent sensory exercise for motor manipulation. Smashing and rolling the dough keeps kids relaxed yet alert at their learning stations, making sensory exploration enjoyable and engaging.</p>
                 </div>
             </div>
         </section>
@@ -370,8 +498,8 @@
                     <span class="product-tag tag-blue">Deep Pressure</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Grounding Weighted Bear</h3>
-                    <p><strong>Advantage:</strong> Flat, distributed weight acts like a continuous, comforting hug, signaling the nervous system to relax.</p>
-                    <p><strong>Use:</strong> Rests on laps in class to stay anchored, or functions as a chest anchor to settle nighttime restlessness and agitation.</p>
+                    <p><strong>Why you might like it:</strong> A weighted lap companion for people who enjoy the feeling of gentle, evenly distributed pressure.</p>
+                    <p><strong>Use:</strong> Can be used on the lap during quiet activities. Always follow the manufacturer's safety guidance and make sure the person can remove it easily and independently.</p>
                 </div>
                 <div>
                     <span class="price-badge">£17.99</span><span class="stock-label">✓ In Stock</span>
@@ -386,12 +514,12 @@
                     <span class="product-tag tag-green">High Contrast</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></div>
                     <h3>Grounding Weighted Panda</h3>
-                    <p><strong>Advantage:</strong> Bold, high-contrast plush fabric pairs physical deep pressure with grounding visual tactile stimulation.</p>
-                    <p><strong>Use:</strong> Comforting lap companion that provides secure physical orientation, reducing pacing or distress in home and elder care.</p>
+                    <p><strong>Why you might like it:</strong> Combines a soft, high-contrast texture with gentle weight for people who enjoy tactile and visual interest.</p>
+                    <p><strong>Use:</strong> A lap companion for quiet time or sensory exploration. Whether it feels comforting will vary from person to person.</p>
                 </div>
                 <div>
                     <span class="price-badge">£17.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="weighted-panda" data-item-name="Grounding Weighted Panda" data-item-price="17.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Bold, high-contrast plush companion for deep pressure therapy.">Add to Basket</button>
+                    <button class="snipcart-add-item" data-item-id="weighted-panda" data-item-name="Grounding Weighted Panda" data-item-price="17.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Bold, high-contrast plush companion for deep pressure sensory support.">Add to Basket</button>
                 </div>
             </div>
 
@@ -402,8 +530,8 @@
                     <span class="product-tag tag-orange">Aromatherapy</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></div>
                     <h3>Lavender Memory Sachet</h3>
-                    <p><strong>Advantage:</strong> Pure botanical lavender releases soothing, natural aroma profiles to safely stabilize mood and unlock memory lanes.</p>
-                    <p><strong>Use:</strong> A great relaxation aid on nightstands or used in memory care to quietly invite historic sensory recall, calm agitation, and encourage speech.</p>
+                    <p><strong>Why you might like it:</strong> A simple lavender scent for people who enjoy familiar, relaxing aromas.</p>
+                    <p><strong>Use:</strong> Keep nearby during quiet time or sensory activities. Familiar scents can prompt memories for some people, but scent preferences are personal.</p>
                 </div>
                 <div>
                     <span class="price-badge">£4.99</span><span class="stock-label">✓ In Stock</span>
@@ -421,8 +549,8 @@
                     <span class="product-tag tag-blue">Expression</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Visual Emotion Sliding Board</h3>
-                    <p><strong>Advantage:</strong> The clean, slide-based interface completely side-steps the requirement for verbal speech during overwhelming meltdowns.</p>
-                    <p><strong>Use:</strong> Bridges vital communication gaps in classrooms or care spaces when processing intense sensory burnout or dementia confusion.</p>
+                    <p><strong>Why you might like it:</strong> A simple visual way to explore and communicate feelings without needing to find the right words straight away.</p>
+                    <p><strong>Use:</strong> Can support conversations at home, school or care settings when talking about feelings feels difficult.</p>
                 </div>
                 <div>
                     <span class="price-badge">£14.99</span><span class="stock-label">✓ In Stock</span>
@@ -437,8 +565,8 @@
                     <span class="product-tag tag-green">Coordination</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Wooden Motor Screw Board</h3>
-                    <p><strong>Advantage:</strong> Immersive, real-world mechanical movements provide excellent spatial hand coordination challenges without screens.</p>
-                    <p><strong>Use:</strong> Strengthens grip mechanics in occupational school therapies, and offers therapeutic focus tasks that channel restless adult motor energy.</p>
+                    <p><strong>Why you might like it:</strong> A hands-on, screen-free activity involving turning, gripping and exploring simple mechanisms.</p>
+                    <p><strong>Use:</strong> A satisfying activity for fine-motor practice, problem-solving or simply keeping hands busy.</p>
                 </div>
                 <div>
                     <span class="price-badge">£17.99</span><span class="stock-label">✓ In Stock</span>
@@ -453,8 +581,8 @@
                     <span class="product-tag tag-orange">Logic & Touch</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></div>
                     <h3>Rainbow Flat-Stone Puzzle</h3>
-                    <p><strong>Advantage:</strong> Smooth, stackable organic patterns engage critical visual sorting while satisfying tactile sorting needs.</p>
-                    <p><strong>Use:</strong> Promotes group interaction and fine motor tracking during early school years, serving as a satisfying, quiet cool-down activity.</p>
+                    <p><strong>Why you might like it:</strong> Smooth pieces that can be stacked, sorted and explored by hand.</p>
+                    <p><strong>Use:</strong> Suitable for quiet play, sorting, stacking and simple hands-on activities at home or in learning settings.</p>
                 </div>
                 <div>
                     <span class="price-badge">£13.99</span><span class="stock-label">✓ In Stock</span>
@@ -469,8 +597,8 @@
                     <span class="product-tag tag-blue">Decompression</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Zen Gel Stick Picker</h3>
-                    <p><strong>Advantage:</strong> Fulfills the deep dermatological picking urge safely by pulling small sticks out of an eco-friendly gel matrix.</p>
-                    <p><strong>Use:</strong> Eliminates unsafe skin picking habits at school desks, office spaces, or during stressful environmental shifts in elder care.</p>
+                    <p><strong>Why you might like it:</strong> A tactile picking-style activity that gives busy hands something to explore.</p>
+                    <p><strong>Use:</strong> Can offer an alternative activity for hands that enjoy picking and pulling. It should not be described as a replacement for support around skin picking.</p>
                 </div>
                 <div>
                     <span class="price-badge">£9.99</span><span class="stock-label">✓ In Stock</span>
@@ -484,8 +612,8 @@
                     <span class="product-tag tag-green">Discreet Fidget</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Textured Phone Grip Strips</h3>
-                    <p><strong>Advantage:</strong> Ultra-slim, patterned silicone textures adhere straight to phone cases for hidden sensory regulation anywhere.</p>
-                    <p><strong>Use:</strong> Gives adult students, professionals, or seniors hidden tactile orientation during public transit, meetings, or social events.</p>
+                    <p><strong>Why you might like it:</strong> Slim textured strips that add a discreet tactile surface to a phone case.</p>
+                    <p><strong>Use:</strong> Handy for discreet tactile exploration while travelling, working or waiting.</p>
                 </div>
                 <div>
                     <span class="price-badge">£5.99</span><span class="stock-label">✓ In Stock</span>
@@ -500,12 +628,12 @@
                     <span class="product-tag tag-orange">Oral Outlet</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></div>
                     <h3>Wearable Chewable Lanyard</h3>
-                    <p><strong>Advantage:</strong> Durable, medical-grade oral chew beads mounted on a breakaway safety cord, keeping clothes clean and dry.</p>
-                    <p><strong>Use:</strong> Provides non-stop oral grounding for kids and adults while reading or studying, keeping self-regulation close at hand.</p>
+                    <p><strong>Why you might like it:</strong> Durable chewable beads on a breakaway cord, designed for people who find chewing a useful sensory activity.</p>
+                    <p><strong>Use:</strong> A portable option for people who choose to use chewable sensory tools during everyday activities. Always check the product's age and safety guidance.</p>
                 </div>
                 <div>
                     <span class="price-badge">£5.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="chew-lanyard" data-item-name="Wearable Chewable Lanyard" data-item-price="5.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Hygienic, medical-grade chewable lanyard beads with safety release.">Add to Basket</button>
+                    <button class="snipcart-add-item" data-item-id="chew-lanyard" data-item-name="Wearable Chewable Lanyard" data-item-price="5.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Chewable beads on a breakaway safety cord for sensory chewing.">Add to Basket</button>
                 </div>
             </div>
 
@@ -516,8 +644,8 @@
                     <span class="product-tag tag-blue">Deep Pressure</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Dynamic Sensory Body Sack</h3>
-                    <p><strong>Advantage:</strong> Resilient, highly-breathable stretchy Lycra applies continuous deep pressure resistance across limbs to organize bodily boundaries.</p>
-                    <p><strong>Use:</strong> Functions as a personal "cocoon" escape space to stretch out hyperactive physical overload at home or school quiet corners.</p>
+                    <p><strong>Why you might like it:</strong> Stretchy fabric that creates a close, enclosed sensory experience for people who enjoy that feeling.</p>
+                    <p><strong>Use:</strong> Can be used as a cosy, enclosed sensory activity. Always supervise appropriately and follow the manufacturer's instructions.</p>
                 </div>
                 <div>
                     <span class="price-badge">£21.99</span><span class="stock-label">✓ In Stock</span>
@@ -532,8 +660,8 @@
                     <span class="product-tag tag-orange">Oral Outlet</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></div>
                     <h3>Sensory Pen & Pencil Topper</h3>
-                    <p><strong>Advantage:</strong> Food-grade, highly-discreet silicone cap that slides onto standard barrels, keeping fingers and sleeves safe from chewing.</p>
-                    <p><strong>Use:</strong> Safeguards writing tools during exams or homework, managing writing stress quietly without distracting peers.</p>
+                    <p><strong>Why you might like it:</strong> A discreet silicone topper that adds a chewable sensory option to a standard pen or pencil.</p>
+                    <p><strong>Use:</strong> Useful during writing, homework or other seated activities where a discreet sensory option may be helpful.</p>
                 </div>
                 <div>
                     <span class="price-badge">£3.99</span><span class="stock-label">✓ In Stock</span>
@@ -551,8 +679,8 @@
                     <span class="product-tag tag-blue">Gross Motor</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Dynamic Liquid Floor Tiles</h3>
-                    <p><strong>Advantage:</strong> Responds to steps or physical pressure by shifting gorgeous gel color pools, rewarding full body movement.</p>
-                    <p><strong>Use:</strong> Enhances balance and step training paths in sensory classrooms, sensory integration gyms, or physical therapy rooms.</p>
+                    <p><strong>Why you might like it:</strong> Colour-changing panels that respond to movement, making stepping and exploring a visually engaging activity.</p>
+                    <p><strong>Use:</strong> A fun addition to movement and sensory play areas. Follow the manufacturer's guidance for safe use.</p>
                 </div>
                 <div>
                     <span class="price-badge">£49.99</span><span class="stock-label">✓ In Stock</span>
@@ -567,8 +695,8 @@
                     <span class="product-tag tag-green">Tactile Variety</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Textured Sensory Wall Panels</h3>
-                    <p><strong>Advantage:</strong> A diverse library of patterns—ranging from soft ridges to sequin tracks—to satisfy extensive touch exploration.</p>
-                    <p><strong>Use:</strong> Creates interactive discovery wall zones in nurseries or quiet corners to provide calming focal points in dementia care environments.</p>
+                    <p><strong>Why you might like it:</strong> A variety of textures to touch, compare and explore at your own pace.</p>
+                    <p><strong>Use:</strong> Great for interactive discovery areas, quiet corners and tactile exploration across a range of settings.</p>
                 </div>
                 <div>
                     <span class="price-badge">£42.99</span><span class="stock-label">✓ In Stock</span>
@@ -583,12 +711,12 @@
                     <span class="product-tag tag-orange">Time Tracking</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Visual Rainbow Countdown Clock</h3>
-                    <p><strong>Advantage:</strong> A clear, disappearing color spectrum provides an intuitive timeline layout without stressful numbers or ticking sounds.</p>
-                    <p><strong>Use:</strong> Eases task transitions in classrooms, structured study routines, or aids orientation routines in elder care memory plans.</p>
+                    <p><strong>Why you might like it:</strong> A clear visual countdown that shows time passing without a ticking sound.</p>
+                    <p><strong>Use:</strong> Can make transitions and time-limited activities easier to see at home, school or in care settings.</p>
                 </div>
                 <div>
                     <span class="price-badge">£16.99</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="countdown-clock" data-item-name="Visual Rainbow Countdown Clock" data-item-price="16.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Silent, non-ticking timeline disk clock to remove transition anxiety.">Add to Basket</button>
+                    <button class="snipcart-add-item" data-item-id="countdown-clock" data-item-name="Visual Rainbow Countdown Clock" data-item-price="16.99" data-item-url="https://openyoursenses.co.uk" data-item-description="Silent, non-ticking timeline disk clock to make the passing of time easier to see.">Add to Basket</button>
                 </div>
             </div>
 
@@ -599,12 +727,12 @@
                     <span class="product-tag tag-blue">Desensitization</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
                     <h3>Deep Pressure Sensory Brush</h3>
-                    <p><strong>Advantage:</strong> Firm, soft-bristled therapy brush engineered to deliver high-surface touch density, helping lower acute physical defensiveness.</p>
-                    <p><strong>Use:</strong> Used by occupational therapists or families to provide soothing neurological grounding before stressful daily routines.</p>
+                    <p><strong>Why you might like it:</strong> A firm, soft-bristled brush offering predictable tactile input for people who enjoy this type of sensory experience.</p>
+                    <p><strong>Use:</strong> Some people use brushes like this as part of a sensory routine. Please follow the manufacturer's instructions and seek professional guidance if you are unsure whether it is appropriate.</p>
                 </div>
                 <div>
                     <span class="price-badge">£7.50</span><span class="stock-label">✓ In Stock</span>
-                    <button class="snipcart-add-item" data-item-id="sensory-brush" data-item-name="Deep Pressure Sensory Brush" data-item-price="7.50" data-item-url="https://openyoursenses.co.uk" data-item-description="Firm therapy brush engineered to deliver soft surface touch density.">Add to Basket</button>
+                    <button class="snipcart-add-item" data-item-id="sensory-brush" data-item-name="Deep Pressure Sensory Brush" data-item-price="7.50" data-item-url="https://openyoursenses.co.uk" data-item-description="Firm, soft-bristled brush offering predictable tactile input.">Add to Basket</button>
                 </div>
             </div>
 
@@ -615,8 +743,8 @@
                     <span class="product-tag tag-green">Muscle Grounding</span>
                     <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></div>
                     <h3>Sensory Resistance Bands</h3>
-                    <p><strong>Advantage:</strong> High-stretch elastic bands that provide deep, muscle-regulating resistance to discharge pent-up motor tracking restlessness.</p>
-                    <p><strong>Use:</strong> Stretches over lower chair frames so kids can bounce feet quietly at their learning desks, or triggers low-impact senior movement focus.</p>
+                    <p><strong>Why you might like it:</strong> Stretchy resistance that adds movement to seated activities.</p>
+                    <p><strong>Use:</strong> Can be fitted to suitable chair legs to give feet something to push or stretch against. Check the manufacturer's fitting and safety guidance.</p>
                 </div>
                 <div>
                     <span class="price-badge">£7.50</span><span class="stock-label">✓ In Stock</span>
@@ -633,149 +761,30 @@
         <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 60px;">
             <div style="background: #fafdfb; border-left: 5px solid #7cc576; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02);">
                 <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🔍 I don't know what my loved one needs. Where should I start?</h4>
-                <p style="margin: 0; color: #556b87; font-size: 1.05rem;">Please don't worry—you do not have to be an expert here. We deliberately organize our tools by <em>experiences</em> (like calm, focus, or communication) rather than clinical terms. If you feel completely lost, scroll to the bottom of this page and use our contact form. Tell us a little bit about what your child, student, or relative is finding difficult, and we will happily help you guide your choices.</p>
+                <p style="margin: 0; color: #556b87; font-size: 1.05rem;">You don't have to be an expert here. We organise our tools around everyday sensory experiences such as calm, focus, movement and tactile play. If you're unsure where to start, get in touch and tell us a little about what you're looking for. We'll do our best to point you towards options worth exploring.</p>
             </div>
             <div style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02); border: 1px solid #eef2f5; border-left: 5px solid #3fa9f5;">
                 <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🧸 Are the weighted plushies suitable for everyone?</h4>
-                <p style="margin: 0; color: #556b87; font-size: 1.05rem;">Weighted tools provide wonderful "deep pressure" therapy that mimics a firm, grounding hug. As a general safety rule for children and seniors, any weighted item should never weigh more than 10% of the individual's total body weight, and the user must always be able to easily remove the item off themselves independently.</p>
+                <p style="margin: 0; color: #556b87; font-size: 1.05rem;">Weighted products aren't suitable for everyone. If you're considering a weighted item, please read the manufacturer's age, weight and safety guidance carefully, and make sure the person using it can remove it independently. If you're unsure, please seek appropriate professional advice before use.</p>
             </div>
             <div style="background: #fafdfb; border-left: 5px solid #7cc576; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02);">
                 <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🧼 How do I clean and care for these sensory tools?</h4>
-        
-    <style>
-        /* Relaxing sensory colors matched directly to your logo */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
-            color: #2b3a55;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(135deg, #eef7f6 0%, #e8f0fe 100%);
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 3px solid #7cc576;
-        }
-        .logo-container {
-            max-width: 320px;
-            margin: 0 auto 15px auto;
-        }
-        .logo-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .tagline {
-            color: #4ba3e3;
-            font-size: 1.3rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin: 0;
-        }
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .welcome-card, .about-card, .featured-product-card, .contact-card {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(43, 58, 85, 0.06); 
-            margin-bottom: 40px;
-        }
-        .welcome-card { border-left: 6px solid #3fa9f5; }
-        .about-card { border-left: 6px solid #7cc576; background-color: #fafdfb; }
-        .focus-box-card { border-left: 6px solid #4ba3e3; background-color: #f7faff; }
-        .regulation-box-card { border-left: 6px solid #7cc576; background-color: #fafdfa; }
-        .contact-card { border-left: 6px solid #3fa9f5; background-color: #fbfcff; text-align: center; }
-        
-        .about-card p { margin-bottom: 18px; font-size: 1.05rem; }
-        .quote-block { background-color: #f4f9fc; padding: 20px; border-radius: 12px; margin: 25px 0; border-left: 4px solid #4ba3e3; }
-        .quote-text { font-style: italic; font-size: 1.1rem; color: #212c42; margin: 5px 0; }
-        h2 { color: #212c42; margin-top: 0; font-size: 1.8rem; }
-        
-        /* Product Grids & Layouts */
-        .section-title { text-align: center; margin: 60px 0 20px 0; color: #212c42; font-size: 2rem; }
-        .category-subtitle { text-align: center; color: #7cc576; font-size: 1.4rem; margin: 40px 0 20px 0; font-weight: 600; border-bottom: 2px solid #f0f4f8; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-        .product-flex { display: flex; flex-direction: column; gap: 30px; margin-bottom: 30px; }
-        @media (min-width: 768px) { .product-flex { flex-direction: row; align-items: center; } }
-        .product-image-box { flex: 1; max-width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-        .product-image-box img { width: 100%; height: auto; display: block; }
-        .product-details { flex: 1.2; }
-        
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
-        .product-card { background: #ffffff; border: 1px solid #eef2f5; border-radius: 16px; padding: 25px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.04); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(43, 58, 85, 0.08); }
-        
-        /* Interactive Soft Badges */
-        .product-tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-        .tag-blue { background: #eaf4fc; color: #3fa9f5; }
-        .tag-green { background: #eef7f6; color: #2bb673; }
-        .tag-orange { background: #fff5eb; color: #ff9f43; }
-        
-        .price-badge { font-size: 1.4rem; font-weight: 700; color: #212c42; margin: 15px 0 5px 0; display: inline-block; }
-        .stock-label { font-size: 0.8rem; font-weight: 600; color: #2bb673; margin-left: 8px; text-transform: uppercase; }
-        
-        /* Fixed Add to Basket Buttons */
-        .buy-btn { display: inline-block; background: #3fa9f5; color: #ffffff; text-decoration: none; padding: 12px 24px; font-size: 0.95rem; font-weight: 600; border-radius: 25px; transition: background 0.2s, transform 0.1s; text-align: center; border: none; margin-top: 15px; cursor: pointer; width: 100%; box-sizing: border-box; }
-        .buy-btn:hover { background: #1a94eb; transform: translateY(-1px); }
-        .buy-btn:active { transform: translateY(1px); }
-        .box-buy-wrapper { margin-top: 20px; border-top: 1px solid #eef2f5; padding-top: 25px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-        
-        /* Floating Shopping Bag Summary Floating Trigger */
-        .snipcart-checkout { position: fixed; bottom: 35px; right: 30px; background: #2bb673; color: #ffffff; border: none; border-radius: 50px; padding: 14px 24px; font-size: 1.05rem; font-weight: 700; box-shadow: 0 10px 25px rgba(43,58,85,0.25); cursor: pointer; display: flex; align-items: center; gap: 10px; z-index: 9999; text-decoration: none; transition: background 0.2s, transform 0.2s; }
-        .snipcart-checkout:hover { background: #23995f; transform: scale(1.03); }
-        .snipcart-items-count { background: #ffffff; color: #2bb673; border-radius: 50%; padding: 1px 7px; font-size: 0.85rem; font-weight: 800; }
-        
-        /* Tool Details Breakdown Grid */
-        .benefits-title { color: #212c42; margin: 40px 0 20px 0; font-size: 1.4rem; border-bottom: 2px solid #eef2f5; padding-bottom: 10px; }
-        .item-breakdown { display: flex; flex-direction: column; gap: 20px; }
-        .item-row { background: #ffffff; border: 1px solid #eef2f5; padding: 20px; border-radius: 12px; }
-        .item-row h4 { margin: 0 0 10px 0; color: #212c42; font-size: 1.15rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-        
-        .setting-tag { font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
-        .tag-school { background: #eef7f6; color: #2bb673; }
-        .tag-home { background: #fff5eb; color: #ff9f43; }
-        .tag-care { background: #f0f3ff; color: #4ba3e3; }
-        
-        /* Form Styling */
-        .contact-form { max-width: 600px; margin: 30px auto 0 auto; text-align: left; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #212c42; }
- .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1c9bc; border-radius: 8px; font-family: inherit; font-size: 1rem; box-sizing: border-box; }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #3fa9f5; box-shadow: 0 0 5px rgba(63, 169, 245, 0.2); }
-        .submit-btn { background: #2bb673; color: #ffffff; border: none; padding: 12px 30px; font-size: 1rem; font-weight: 600; border-radius: 25px; cursor: pointer; transition: background 0.2s; display: inline-block; }
-        .submit-btn:hover { background: #23995f; }
-        .highlight-text { color: #2bb673; font-weight: 600; }
-        .closing-tagline { font-size: 1.2rem; font-weight: 600; color: #4a5c50; margin-top: 30px; border-top: 1px dashed #d1c9bc; padding-top: 20px; }
-    </style>
-</head>
-<body>
+            <p style="margin: 0; color: #556b87; font-size: 1.05rem;">
+                Care instructions vary by product, so please follow the manufacturer's cleaning guidance supplied with each item.
+                If you're unsure about a particular product, please contact us before cleaning it.
+            </p>
+        </div>
 
-    <button class="snipcart-checkout">
-        🛒 View Basket 
-        <span class="snipcart-items-count">0</span>
-    </button>
+        <section class="contact-card">
+            <h2>Need a little help?</h2>
+            <p>Not sure where to begin? That's completely okay. Tell us what you're hoping to support, and we'll help you explore the options we have.</p>
+            <p><a class="submit-btn" href="mailto:hello@openyoursenses.co.uk">Email Open Your Senses</a></p>
+        </section>
+    </div>
 
-        
-        <h2 class="section-title">Common Questions & Gentle Answers</h2>
-        <p style="text-align: center; max-width: 600px; margin: -15px auto 40px auto; color: #556b87; font-size: 1.1rem;">
-            Everything you might want to know about our sensory tools, safety, and finding the right fit for your loved one.
-        </p>
+    <footer style="text-align:center; padding:30px 20px; color:#556b87; font-size:0.9rem;">
+        <p>&copy; 2026 Open Your Senses. Where everyone belongs.</p>
+    </footer>
 
-        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 60px;">
-            <div style="background: #fafdfb; border-left: 5px solid #7cc576; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02);">
-                <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🔍 I don't know what my loved one needs. Where should I start?</h4>
-                <p style="margin: 0; color: #556b87; font-size: 1.05rem;">Please don't worry—you do not have to be an expert here. We deliberately organize our tools by <em>experiences</em> (like calm, focus, or communication) rather than clinical terms. If you feel completely lost, scroll to the bottom of this page and use our contact form. Tell us a little bit about what your child, student, or relative is finding difficult, and we will happily help you guide your choices.</p>
-            </div>
-            <div style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02); border: 1px solid #eef2f5; border-left: 5px solid #3fa9f5;">
-                <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🧸 Are the weighted plushies suitable for everyone?</h4>
-                <p style="margin: 0; color: #556b87; font-size: 1.05rem;">Weighted tools provide wonderful "deep pressure" therapy that mimics a firm, grounding hug. As a general safety rule for children and seniors, any weighted item should never weigh more than 10% of the individual's total body weight, and the user must always be able to easily remove the item off themselves independently.</p>
-            </div>
-            <div style="background: #fafdfb; border-left: 5px solid #7cc576; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02);">
-                <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🧼 How do I clean and care for these sensory tools?</h4>
-        
+</body>
+</html>
