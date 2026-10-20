@@ -816,6 +816,52 @@ button.snipcart-add-item:hover {
     <p>&copy; 2026 Open Your Senses. Where everyone belongs.</p>
     <p><a href="privacy.html">Privacy Policy</a> | <a href="returns.html">Returns &amp; Refunds</a></p>
 </footer>
+<script>
+async function updateStockLabels() {
+  const labels = document.querySelectorAll('.stock-label');
 
+  try {
+    const response = await fetch('/api/stock');
+
+    if (!response.ok) {
+      throw new Error('Stock check unavailable');
+    }
+
+    const data = await response.json();
+
+    document.querySelectorAll('.snipcart-add-item').forEach(button => {
+      const productId = button.getAttribute('data-item-id');
+      const product = data.products.find(item =>
+        item.userDefinedId === productId || item.id === productId
+      );
+
+      const card = button.closest('.product-details')
+        || button.closest('.product-card')
+        || button.closest('section');
+
+      const label = card?.querySelector('.stock-label');
+
+      if (!label) return;
+
+      if (!product || typeof product.stock !== 'number') {
+        label.textContent = 'Stock status unavailable';
+        return;
+      }
+
+      if (product.stock > 0) {
+        label.textContent = '✓ In Stock';
+      } else {
+        label.textContent = '⚠ Out of Stock';
+      }
+    });
+  } catch (error) {
+    labels.forEach(label => {
+      label.textContent = 'Stock status unavailable';
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', updateStockLabels);
+</script>
 </body>
 </html>
