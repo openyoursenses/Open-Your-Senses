@@ -39,6 +39,8 @@ export async function onRequestGet({ env }) {
       {
         products: products.map(product => ({
           id: product.id,
+            userDefinedId: product.userDefinedId,
+  name: product.name,
           stock: product.stock,
           inventoryManagementMethod: product.inventoryManagementMethod,
           allowOutOfStockPurchases: product.allowOutOfStockPurchases
