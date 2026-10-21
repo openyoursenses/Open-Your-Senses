@@ -353,26 +353,81 @@ button.snipcart-add-item:hover {
     margin: 0 0 20px;
 }
 
+/* Open Your Senses - Main Navigation */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px auto 0;
+    max-width: 900px;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 9px 17px;
+    border-radius: 24px;
+    color: #347f77;
+    background: #ffffff;
+    border: 1px solid #d5ebe7;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    background: #50AA9E;
+    color: #ffffff;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .main-nav a {
+        padding: 8px 12px;
+        font-size: 0.88rem;
+    }
+}
+
 
     </style>
 </head>
 
 <body>
 
-    <header>
-        <button type="button" class="snipcart-checkout">
-            🛒 View Basket
-            <span class="snipcart-items-count">0</span>
-        </button>
-        <div class="logo-container">
-            <img src="Open Your Senses Logo.png" alt="Open Your Senses Logo">
-        </div>
-        <p class="tagline">Where Everyone Belongs</p>
-    </header>
+    
+<header>
+    <button type="button" class="snipcart-checkout">
+        🛒 View Basket
+        <span class="snipcart-items-count">0</span>
+    </button>
+
+    <div class="logo-container">
+        <img src="Open Your Senses Logo.png" alt="Open Your Senses Logo">
+    </div>
+
+    <p class="tagline">Where Everyone Belongs</p>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#collections">Shop Collections</a>
+        <a href="#about">Our Story</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
 
     <div class="container">
         <!-- Welcome / Hero Section -->
-        <section class="hero-intro">
+        <section id="home" class="hero-intro">
             <h1>Sensory support for real life.</h1>
             <p class="hero-lead">Thoughtfully chosen sensory tools for calm, focus, comfort, exploration and everyday moments when a little extra support can make a difference.</p>
             <p class="hero-gentle">Whether you're looking for yourself, your child, a student, a family member or someone you care for, you're welcome here. You don't need to know exactly what you're looking for.</p>
@@ -381,7 +436,7 @@ button.snipcart-add-item:hover {
         </section>
 
         <!-- Your Beautiful Story Section -->
-        <section class="about-card">
+      <section id="about" class="about-card">
             <h2>Why I created Open Your Senses</h2>
             <p>Open Your Senses started with my son.</p>
             <p>He has Asperger's, and school was incredibly difficult for him.</p>
@@ -877,7 +932,7 @@ button.snipcart-add-item:hover {
             </p>
         </div>
 
-        <section class="contact-card">
+       <section id="contact" class="contact-card">
             <h2>Need a little help?</h2>
             <p>Not sure where to begin? That's completely okay. Tell us what you're hoping to support, and we'll help you explore the options we have.</p>
             <p><a class="submit-btn" href="mailto:hello@openyoursenses.co.uk">Email Open Your Senses</a></p>
