@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the Senses sensory box from Open Your Senses, a collection of sensory tools for exploring sights, sounds, textures and more.">
+    <title>Discover the Senses Sensory Box | Open Your Senses</title>
+
+    <!-- Snipcart v3 -->
+    <script>
+      window.SnipcartSettings = {
+        publicApiKey: "ODZiMWU5ZjYtNzFkNC00NGFkLWJmOWUtODVhZDkyZmRlMzk0NjM5MjY5MjE2MjQ3ODY3MTc0",
+        loadStrategy: "on-user-interaction",
+        currency: "gbp",
+        version: "3.7.1"
+      };
+
+      (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(c.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+    </script>
+
+    <style>
+        :root {
+            --teal: #50AA9E;
+            --teal-dark: #3F9187;
+            --ink: #263B3A;
+            --soft: #F3F8F7;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 22px 16px 14px;
+            background: var(--soft);
+        }
+        header img { max-width: 220px; width: 80%; height: auto; }
+        .tagline { margin: 4px 0 12px; }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            padding: 12px;
+        }
+        nav a { color: var(--teal-dark); text-decoration: none; font-weight: bold; }
+        main { max-width: 960px; margin: 0 auto; padding: 32px 20px; }
+        .product {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 32px;
+            align-items: center;
+        }
+        .product img { width: 100%; height: auto; border-radius: 14px; }
+        .price { font-size: 1.6rem; font-weight: bold; color: var(--teal-dark); }
+        .button {
+            display: inline-block;
+            border: 0;
+            border-radius: 8px;
+            background: var(--teal);
+            color: #fff;
+            padding: 13px 22px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .button:hover { background: var(--teal-dark); }
+        footer { text-align: center; padding: 22px 16px; background: var(--soft); }
+        @media (max-width: 650px) {
+            .product { grid-template-columns: 1fr; }
+            main { padding: 22px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" aria-label="Open Your Senses homepage">
+            <img src="Open Your Senses Logo.png" alt="Open Your Senses">
+        </a>
+        <p class="tagline">Where Everyone Belongs</p>
+        <button class="button snipcart-checkout" type="button">
+            🛒 View Basket (<span class="snipcart-items-count">0</span>)
+        </button>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#collections">Shop Collections</a>
+            <a href="index.html#about">Our Story</a>
+            <a href="index.html#faqs">FAQs</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product">
+            <div>
+                <img src="Discover the Senses.png" alt="Discover the Senses sensory box from Open Your Senses">
+            </div>
+            <div>
+                <p>OPEN YOUR SENSES · SENSORY COLLECTION</p>
+                <h1>Discover the Senses Sensory Box</h1>
+                <p class="price">£38.99</p>
+                <p>A thoughtfully selected sensory collection designed to encourage exploration through different sights, sounds, textures and sensory experiences.</p>
+                <p>Suitable tools and experiences will vary from person to person. Explore at a comfortable pace and choose what feels right for your needs.</p>
+
+                <button
+                    class="button snipcart-add-item"
+                    data-item-id="discover-senses-box"
+                    data-item-name="Discover the Senses Sensory Box"
+                    data-item-price="38.99"
+                    data-item-url="/discover-the-senses.html"
+                    data-item-description="A sensory collection for exploring different sights, sounds and textures."
+                    data-item-image="/Discover%20the%20Senses.png"
+                    type="button">
+                    Add to Basket
+                </button>
+
+                <p><small>UK delivery options are shown at checkout.</small></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Open Your Senses — Where Everyone Belongs</p>
+        <p><a href="mailto:hello@openyoursenses.co.uk">hello@openyoursenses.co.uk</a></p>
+        <p><a href="index.html">Return to the homepage</a></p>
+    </footer>
+</body>
+</html>
