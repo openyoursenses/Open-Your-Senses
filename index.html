@@ -1,993 +1,280 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Your Senses | Sensory Tools for Everyday Life</title>
-    
-    <!-- Snipcart v3 -->
-<script>
-  window.SnipcartSettings = {
-    publicApiKey: "ODZiMWU5ZjYtNzFkNC00NGFkLWJmOWUtODVhZDkyZmRlMzk0NjM5MjY5MjE2MjQ3ODY3MTc0",
-    loadStrategy: "on-user-interaction",
-    currency: "gbp",
-    version: "3.7.1"
-  };
-
-  (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
-</script>
-    <style>
-        /* Relaxing sensory colors matched directly to your logo */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
-            color: #344b49;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-        }
-  
-header {
-    background: linear-gradient(135deg, #f4fbfa 0%, #e8f6f4 100%);
-    text-align: center;
-    padding: 25px 20px 40px;
-    border-bottom: 3px solid #50AA9E;
-    position: relative;
-}
-
-header .snipcart-checkout {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
-        .logo-container {
-            max-width: 320px;
-            margin: 0 auto 15px auto;
-        }
-        .logo-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .tagline {
-    color: #3f9187;
-    font-size: 1.3rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: 0;
-}
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-     
-.welcome-card, .about-card, .featured-product-card, .contact-card {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid #e3f0ee;
-    box-shadow: 0 8px 28px rgba(43, 90, 84, 0.08);
-    margin-bottom: 40px;
-}
-
-        .welcome-card { border-left: 6px solid #3fa9f5; }
-        .about-card { border-left: 6px solid #7cc576; background-color: #fafdfb; }
-        .focus-box-card { border-left: 6px solid #4ba3e3; background-color: #f7faff; }
-        .regulation-box-card { border-left: 6px solid #7cc576; background-color: #fafdfa; }
-        .contact-card { border-left: 6px solid #3fa9f5; background-color: #fbfcff; text-align: center; }
-        
-        .about-card p { margin-bottom: 18px; font-size: 1.05rem; }
-        .quote-block { background-color: #f4f9fc; padding: 20px; border-radius: 12px; margin: 25px 0; border-left: 4px solid #4ba3e3; }
-        .quote-text { font-style: italic; font-size: 1.1rem; color: #212c42; margin: 5px 0; }
-        h2 { color: #212c42; margin-top: 0; font-size: 1.8rem; }
-        
-        /* Product Grids & Layouts */
-        .section-title { text-align: center; margin: 60px 0 20px 0; color: #212c42; font-size: 2rem; }
-        .category-subtitle { text-align: center; color: #7cc576; font-size: 1.4rem; margin: 40px 0 20px 0; font-weight: 600; border-bottom: 2px solid #f0f4f8; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-        .product-flex { display: flex; flex-direction: column; gap: 30px; margin-bottom: 30px; }
-        @media (min-width: 768px) { .product-flex { flex-direction: row; align-items: center; } }
-        .product-image-box { flex: 1; max-width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-        .product-image-box img { width: 100%; height: auto; display: block; }
-        
-.product-image-box {
-    flex: 1;
-    max-width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(43, 90, 84, 0.10);
-    background: #f4fbfa;
-}
-
-.product-image-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-        
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
-        .product-card { background: #ffffff; border: 1px solid #eef2f5; border-radius: 16px; padding: 25px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.04); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(43, 58, 85, 0.08); }
-        
-        /* Interactive Soft Badges */
-        .product-tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-        
-/* Open Your Senses - Premium Collection Badges */
-.product-tag {
-    display: inline-block;
-    padding: 5px 13px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    margin-bottom: 12px;
-}
-
-.tag-blue {
-    background: #e8f6f4;
-    color: #347f77;
-}
-
-.tag-green {
-    background: #e8f6f4;
-    color: #347f77;
-}
-
-.tag-orange {
-    background: #e8f6f4;
-    color: #347f77;
-}
-
-       
-.price-badge {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #344b49;
-    margin: 15px 0 5px 0;
-    display: inline-block;
-    letter-spacing: -0.3px;
-}
- .stock-label { font-size: 0.8rem; font-weight: 600; color: #2bb673; margin-left: 8px; text-transform: uppercase; }
-       
-/* Fixed Add to Basket Buttons */
-.buy-btn {
-    display: inline-block;
-    background: #50AA9E;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 24px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    border-radius: 25px;
-    transition: background 0.2s, transform 0.1s;
-    text-align: center;
-    border: none;
-    margin-top: 15px;
-    cursor: pointer;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.buy-btn:hover {
-    background: #3F9187;
-    transform: translateY(-1px);
-}
-
-.buy-btn:active {
-    transform: translateY(1px);
-}
-
-.box-buy-wrapper {
-    margin-top: 24px;
-    border-top: 1px solid #e3f0ee;
-    padding-top: 22px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-       
-/* Shopping Bag Summary - Integrated with Header */
-.snipcart-checkout {
-    position: static;
-    background: #50AA9E;
-    color: #ffffff;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 18px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    box-shadow: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    z-index: auto;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
-}
-
-.snipcart-checkout:hover {
-    background: #3F9187;
-    transform: translateY(-1px);
-}
-
-.snipcart-items-count {
-    background: #ffffff;
-    color: #50AA9E;
-    border-radius: 50%;
-    padding: 1px 7px;
-    font-size: 0.85rem;
-    font-weight: 800;
-}
-
-@media (max-width: 600px) {
-    header {
-        padding-top: 75px;
-    }
-
-    header .snipcart-checkout {
-        top: 12px;
-        right: 12px;
-    }
-}
-
-        /* Tool Details Breakdown Grid */
-        .benefits-title { color: #212c42; margin: 40px 0 20px 0; font-size: 1.4rem; border-bottom: 2px solid #eef2f5; padding-bottom: 10px; }
-        .item-breakdown { display: flex; flex-direction: column; gap: 20px; }
-        .item-row { background: #ffffff; border: 1px solid #eef2f5; padding: 20px; border-radius: 12px; }
-        .item-row h4 { margin: 0 0 10px 0; color: #212c42; font-size: 1.15rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-        
-        .setting-tag { font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
-        .tag-school { background: #eef7f6; color: #2bb673; }
-        .tag-home { background: #fff5eb; color: #ff9f43; }
-        .tag-care { background: #f0f3ff; color: #4ba3e3; }
-        
-        /* Form Styling */
-        .contact-form { max-width: 600px; margin: 30px auto 0 auto; text-align: left; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #212c42; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1c9bc; border-radius: 8px; font-family: inherit; font-size: 1rem; box-sizing: border-box; }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #3fa9f5; box-shadow: 0 0 5px rgba(63, 169, 245, 0.2); }
-        .submit-btn { background: #2bb673; color: #ffffff; border: none; padding: 12px 30px; font-size: 1rem; font-weight: 600; border-radius: 25px; cursor: pointer; transition: background 0.2s; display: inline-block; }
-        .submit-btn:hover { background: #23995f; }
-        .highlight-text { color: #2bb673; font-weight: 600; }
-        .closing-tagline { font-size: 1.2rem; font-weight: 600; color: #4a5c50; margin-top: 30px; border-top: 1px dashed #d1c9bc; padding-top: 20px; }
-
-        /* Warm, welcoming homepage hero */
-        .hero-intro {
-            text-align: center;
-            padding: 56px 40px 48px;
-            background: linear-gradient(135deg, #f8fcfb 0%, #f5f9ff 100%);
-            border-radius: 22px;
-            margin-bottom: 40px;
-            border: 1px solid #edf3f4;
-        }
-        .hero-intro h1 {
-            color: #212c42;
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.15;
-            margin: 0 0 18px;
-            font-weight: 650;
-        }
-        .hero-intro .hero-lead {
-            max-width: 720px;
-            margin: 0 auto 16px;
-            font-size: 1.2rem;
-            color: #4f627a;
-        }
-        .hero-intro .hero-gentle {
-            max-width: 650px;
-            margin: 0 auto 28px;
-            color: #61728a;
-        }
-        .hero-button {
-            display: inline-block;
-            background: #50AA9E;
-            color: #fff;
-            text-decoration: none;
-            padding: 13px 28px;
-            border-radius: 28px;
-            font-weight: 650;
-            box-shadow: 0 7px 18px rgba(43,118,115,0.14);
-            transition: transform .2s, box-shadow .2s;
-        }
-        .hero-button:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(43,118,115,0.18); }
-        .help-line { margin: 18px 0 0; font-size: .95rem; color: #65758a; }
-       .help-line a { color: #3f9187; font-weight: 600; text-decoration: none; }
-        @media (max-width: 600px) {
-            .hero-intro { padding: 38px 22px 34px; }
-            .hero-intro .hero-lead { font-size: 1.08rem; }
-        }
-/* Open Your Senses - Collections Introduction */
-.section-intro {
-    max-width: 720px;
-    margin: 0 auto 32px;
-    text-align: center;
-    color: #526b68;
-    font-size: 1.08rem;
-    line-height: 1.8;
-    padding: 0 12px;
-}
-     
-/* Open Your Senses - Premium Brand Buttons */
-button.snipcart-add-item {
-    background-color: #50AA9E;
-    color: #ffffff;
-    border: 1px solid #50AA9E;
-    border-radius: 28px;
-    padding: 13px 24px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-button.snipcart-add-item:hover {
-    background-color: #3f9187;
-    border-color: #3f9187;
-    box-shadow: 0 5px 14px rgba(63, 145, 135, 0.2);
-    transform: translateY(-1px);
-}
-
-        
-/* Open Your Senses - Premium Product Titles */
-.product-details h3 {
-    color: #344b49;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.35;
-    margin: 0 0 14px;
-}
-        
-/* Open Your Senses - Product Description Styling */
-.product-details p {
-    color: #526b68;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin: 0 0 20px;
-}
-
-/* Open Your Senses - Main Navigation */
-.main-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 24px auto 0;
-    max-width: 900px;
-}
-
-.main-nav a {
-    display: inline-block;
-    padding: 9px 17px;
-    border-radius: 24px;
-    color: #347f77;
-    background: #ffffff;
-    border: 1px solid #d5ebe7;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a:focus-visible {
-    background: #50AA9E;
-    color: #ffffff;
-    outline: none;
-}
-
-@media (max-width: 600px) {
-    .main-nav {
-        gap: 8px;
-        margin-top: 20px;
-    }
-
-    .main-nav a {
-        padding: 8px 12px;
-        font-size: 0.88rem;
-    }
-}
-
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thoughtfully chosen sensory tools for calm, focus, comfort, exploration and everyday life.">
+  <title>Open Your Senses | Sensory Tools for Everyday Life</title>
+  <link rel="icon" type="image/png" href="/FAVI.png">
+  <style>
+    :root{--teal:#50AA9E;--teal-dark:#3F9187;--ink:#344b49;--muted:#526b68;--pale:#f4fbfa;--line:#dcece9;--white:#fff;--blue-pale:#f5f9ff;--shadow:0 8px 28px rgba(43,90,84,.08)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;line-height:1.7;color:var(--ink);background:#fff}
+    a{color:var(--teal-dark)}
+    header{position:relative;text-align:center;padding:28px 20px 24px;background:linear-gradient(135deg,#f4fbfa,#e8f6f4);border-bottom:3px solid var(--teal)}
+    .logo{display:block;width:min(100%,320px);height:auto;margin:0 auto 8px}
+    .tagline{margin:0;color:var(--teal-dark);font-size:1.1rem;font-weight:600;letter-spacing:1.3px;text-transform:uppercase}
+    .basket{position:absolute;right:20px;top:18px}
+    .btn,.basket{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--teal);color:#fff;border:0;border-radius:28px;padding:11px 19px;font:inherit;font-weight:650;text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}
+    .btn:hover,.basket:hover{background:var(--teal-dark);transform:translateY(-1px);color:#fff}
+    .snipcart-items-count{background:#fff;color:var(--teal-dark);border-radius:50%;padding:0 7px;font-size:.85rem}
+    nav{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:20px auto 0}
+    nav a{padding:7px 14px;border-radius:24px;background:#fff;border:1px solid #d5ebe7;text-decoration:none;font-weight:600;color:#347f77}
+    nav a:hover{background:var(--teal);color:#fff}
+    .container{width:min(1120px,100% - 32px);margin:34px auto}
+    .hero,.panel,.collection,.product-card{border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+    .hero{text-align:center;padding:clamp(28px,5vw,56px);background:linear-gradient(135deg,#f8fcfb,var(--blue-pale));margin-bottom:38px}
+    h1,h2,h3,h4{line-height:1.25;color:#263e3b}
+    h1{font-size:clamp(2rem,5vw,3.1rem);margin:0 0 18px}
+    h2{font-size:clamp(1.55rem,3vw,2rem);margin:0 0 16px}
+    h3{font-size:1.3rem;margin:8px 0 10px}
+    .lead{font-size:1.15rem;max-width:760px;margin:0 auto 16px;color:#4f627a}
+    .hero p{max-width:760px;margin-left:auto;margin-right:auto}
+    .help-line{margin:20px 0 0}
+    .panel{padding:clamp(24px,4vw,40px);margin-bottom:42px;background:#fff}
+    .story{background:#fafdfb;border-left:6px solid #7cc576}
+    .quote{padding:18px 22px;background:#f4f9fc;border-left:4px solid #4ba3e3;border-radius:12px;margin:24px 0}
+    .section-title{text-align:center;margin:55px 0 14px}
+    .section-intro{max-width:760px;margin:0 auto 28px;text-align:center;color:var(--muted)}
+    .collection{padding:clamp(20px,3vw,34px);margin-bottom:30px;background:#fff}
+    .collection.focus{border-left:6px solid #4ba3e3;background:#fbfdff}
+    .collection.regulation{border-left:6px solid #7cc576;background:#fcfefb}
+    .collection.discover{border-left:6px solid #d8c2ee;background:#fdfbff}
+    .collection-head{display:grid;grid-template-columns:minmax(180px,300px) 1fr;gap:28px;align-items:center}
+    .collection-head img{display:block;width:100%;height:auto;border-radius:14px}
+    .tag{display:inline-block;background:#e8f6f4;color:#347f77;border-radius:20px;padding:4px 12px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+    .price{font-size:1.45rem;font-weight:750;white-space:nowrap;color:var(--ink)}
+    .buy-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px}
+    .stock-label{display:block;font-size:.88rem;font-weight:650;color:#287b53;margin:5px 0}
+    .stock-label.out{color:#a04436}.stock-label.unknown{color:#7a6a44}
+    .item-breakdown{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:28px}
+    .item-row{padding:18px;border:1px solid #e6efed;border-radius:12px;background:#fff}
+    .item-row h4{margin:0 0 10px}.item-row p{margin:0 0 9px}.item-row p:last-child{margin-bottom:0}
+    .category-subtitle{text-align:center;font-size:1.25rem;color:var(--teal-dark);font-weight:700;text-transform:uppercase;letter-spacing:.7px;margin:42px 0 18px}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px;margin-bottom:38px}
+    .product-card{display:flex;flex-direction:column;justify-content:space-between;padding:20px;min-width:0;box-shadow:0 4px 15px rgba(43,58,85,.045);transition:transform .2s,box-shadow .2s}
+    .product-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .product-card img{display:block;width:100%;height:auto;max-height:260px;object-fit:contain;border-radius:12px;background:var(--pale);margin-bottom:16px}
+    .product-card p{color:var(--muted);margin:8px 0 15px}
+    .product-card .product-bottom{margin-top:16px}
+    .setting-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+    .setting-tag{font-size:.72rem;padding:2px 8px;border-radius:5px;background:#f0f3ff;color:#4b68a1;font-weight:650}
+    .faq-list{display:grid;gap:16px;margin:28px 0 54px}
+    .faq{padding:22px;border-radius:12px;background:#fafdfb;border:1px solid var(--line)}
+    .faq h3{font-size:1.08rem;margin:0 0 8px}.faq p{margin:0}
+    .contact{text-align:center;background:#fbfcff;border-left:6px solid #4ba3e3}
+    footer{text-align:center;padding:28px 18px;color:#556b87;font-size:.92rem}
+    footer p{margin:6px}
+    @media(max-width:700px){.basket{position:static;margin-bottom:16px}.collection-head{grid-template-columns:1fr}.collection-head img{max-width:300px;margin:auto}.buy-row .btn{width:100%}.container{width:min(100% - 22px,1120px)}}
+  </style>
+  <!-- Snipcart v3.7.1: keep your existing public key and checkout settings -->
+  <script>
+    window.SnipcartSettings = {
+      publicApiKey: "ODZiMWU5ZjYtNzFkNC00NGFkLWJmOWUtODVhZDkyZmRlMzk0NjM5MjY5MjE2MjQ3ODY3MTc0",
+      loadStrategy: "on-user-interaction",
+      currency: "gbp",
+      version: "3.7.1"
+    };
+    (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+  </script>
 </head>
-
 <body>
-
-    
 <header>
-    <button type="button" class="snipcart-checkout">
-        🛒 View Basket
-        <span class="snipcart-items-count">0</span>
-    </button>
-
-    <div class="logo-container">
-        <img src="Open Your Senses Logo.png" alt="Open Your Senses Logo">
-    </div>
-
-    <p class="tagline">Where Everyone Belongs</p>
-
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#collections">Shop Collections</a>
-        <a href="#about">Our Story</a>
-        <a href="#faqs">FAQs</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <button type="button" class="basket snipcart-checkout">🛒 View Basket <span class="snipcart-items-count">0</span></button>
+  <img class="logo" src="/Open Your Senses Logo.png" alt="Open Your Senses logo">
+  <p class="tagline">Where Everyone Belongs</p>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a><a href="#collections">Shop Collections</a><a href="#about">Our Story</a><a href="#faqs">FAQs</a><a href="#contact">Contact</a>
+  </nav>
 </header>
 
+<main class="container">
+  <section id="home" class="hero">
+    <h1>Sensory support for real life.</h1>
+    <p class="lead">Thoughtfully chosen sensory tools for calm, focus, comfort, exploration and everyday moments when a little extra support may help.</p>
+    <p>Whether you're looking for yourself, your child, a student, a family member or someone you care for, you're welcome here. You don't need to know exactly what you're looking for.</p>
+    <a class="btn" href="#collections">Explore our collections</a>
+    <p class="help-line">Not sure where to start? <a href="mailto:hello@openyoursenses.co.uk">Just ask. We're happy to help.</a></p>
+  </section>
 
-    <div class="container">
-        <!-- Welcome / Hero Section -->
-        <section id="home" class="hero-intro">
-            <h1>Sensory support for real life.</h1>
-            <p class="hero-lead">Thoughtfully chosen sensory tools for calm, focus, comfort, exploration and everyday moments when a little extra support can make a difference.</p>
-            <p class="hero-gentle">Whether you're looking for yourself, your child, a student, a family member or someone you care for, you're welcome here. You don't need to know exactly what you're looking for.</p>
-            <a class="hero-button" href="#collections">Explore our collections</a>
-            <p class="help-line">Not sure where to start? <a href="mailto:hello@openyoursenses.co.uk">Just ask. We're happy to help.</a></p>
-        </section>
+  <section id="about" class="panel story">
+    <h2>Why I created Open Your Senses</h2>
+    <p>Open Your Senses started with my son. He has Asperger's, and school was incredibly difficult for him. For years, I felt I was trying to explain something that nobody was really hearing.</p>
+    <p>I repeatedly asked for him to be assessed because I could see that he was struggling. Three long years later, we finally had an answer. An answer didn't suddenly make everything easy, but it helped us understand him.</p>
+    <p>Along the way, we began discovering things that could help him feel more comfortable and navigate the world around him. Finding the right sensory tools wasn't easy: there were so many products, websites and pieces of information to work through.</p>
+    <p>My son is now an adult, but I haven't forgotten how it felt to be the parent searching for answers. That's why I created Open Your Senses: a place where parents, carers, teachers, professionals and individuals can explore sensory tools without feeling overwhelmed.</p>
+    <div class="quote"><p>“I'm not sure what I need. Can you help me?”</p><p><strong>Of course.</strong></p></div>
+    <p>Sensory needs don't belong to one age, one diagnosis or one type of person. We all experience the world through our senses. We can't promise the perfect answer for everyone, but we can start with the person, not the label.</p>
+    <p><strong>Open Your Senses — Where everyone belongs.</strong></p>
+  </section>
 
-        <!-- Your Beautiful Story Section -->
-      <section id="about" class="about-card">
-            <h2>Why I created Open Your Senses</h2>
-            <p>Open Your Senses started with my son.</p>
-            <p>He has Asperger's, and school was incredibly difficult for him.</p>
-            <p>For years, I felt like I was trying to explain something that nobody was really hearing.</p>
-            <p>I repeatedly asked for him to be assessed because I could see that he was struggling. But again and again, I was told that he didn't meet the criteria.</p>
-            <p>Three long years later, we finally had an answer: Asperger's.</p>
-            <p>An answer didn't suddenly make everything easy, but it helped us understand him.</p>
-            <p>We worked hard to find the right educational setting and, along the way, began discovering the things that could help him feel more comfortable, regulated and able to navigate the world around him.</p>
-            
-            <p><strong>But there was another problem.</strong></p>
-            <p>Finding the right sensory tools wasn't easy.</p>
-            <p>There were so many products, different websites and so much information to work through. It was difficult to know what might genuinely be useful, what might suit his needs and where to begin.</p>
-            
-            <p>My son is now an adult.</p>
-            <p>But I haven't forgotten how it felt to be the parent searching for answers, trying to find something — anything — that might make life a little easier.</p>
-            <p>That's why I created Open Your Senses.</p>
-            <p>I wanted to create the place I wish I'd had back then.</p>
-            <p>A place where parents, carers, teachers, professionals and individuals can explore sensory tools and ideas without feeling overwhelmed.</p>
-            <p>A place where you don't have to be an expert. </p>
-            <p>A place where different needs are understood and respected.</p>
-            
-            <div class="quote-block">
-                <p>And a place where someone can simply say:</p>
-                <p class="quote-text">“I'm not sure what I need. Can you help me?”</p>
-                <p>And the answer is:</p>
-                <p class="quote-text"><strong>“Of course.”</strong></p>
-            </div>
-            
-            <p>Because sensory needs don't belong to one age, one diagnosis or one type of person. We all experience the world through our senses.</p>
-            <p>From babies discovering the world around them, to children finding ways to feel comfortable and focused, adults looking for comfort or concentration, and older people enjoying familiar sights, sounds, textures and memories — there are so many ways our senses can support everyday life.</p>
-            <p>I can't promise that we'll have the perfect answer for everyone. What I can promise is that Open Your Senses will always start with the person, not the label.</p>
-            <p>Because everyone deserves to be heard.</p>
-            
-            <div class="closing-tagline">
-                Open Your Senses<br>
-                <span class="highlight-text">Where everyone belongs.</span>
-            </div>
-        </section>
+  <h2 id="collections" class="section-title">Find Your Sensory Box</h2>
+  <p class="section-intro">Thoughtfully chosen sensory tools for different needs, interests and everyday moments. Explore each collection and see what might suit you or someone you support.</p>
 
-       <h2 id="collections" class="section-title">Find Your Sensory Box</h2>
-<p class="section-intro">Thoughtfully chosen sensory tools for different needs, interests and everyday moments. Explore each collection to discover what's inside and see what might suit you or someone you support.</p>
-        
-         <!-- BOX 1: FOCUS & FLOW -->
-        <section class="featured-product-card focus-box-card">
-            <div class="product-flex">
-                <div class="product-image-box"><img src="Focus & Flow.png" alt="Focus and Flow Sensory Box"></div>
-                <div class="product-details">
-                    <span class="product-tag tag-blue">Curated Toolkit</span>
-                    <h3>The Focus & Flow Box</h3>
-                    <p>A thoughtfully chosen collection of simple sensory tools for quiet focus, hands-on exploration and moments when a little extra sensory support may be helpful.</p>
-                    
-                    <div class="box-buy-wrapper">
-                        <div>
-                            <span class="price-badge">£27.99</span>
-                           <span class="stock-label">✓ Available to order</span>
-                        </div>
-                         <button type="button" class="snipcart-add-item"
-                            data-item-id="focus-flow-box"
-                            data-item-name="The Focus & Flow Box"
-                            data-item-price="27.99"
-                            data-item-url="/"
-                            data-item-description="Curated collection designed to encourage gentle concentration and focus.">
-                            Add to Basket
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <h3 class="benefits-title">💡 A little more about each item:</h3>
-            <div class="item-breakdown">
-                <div class="item-row">
-                    <h4>⏳ Visual Sand Timers <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> A simple, silent way to see time passing without relying on a ticking clock or an alarm.</p>
-                    <p><strong>How it can be used:</strong> Useful at home, in classrooms or care settings when seeing time pass may make transitions feel more predictable.</p>
-                </div>
-                <div class="item-row">
-                    <h4>✏️ Pencil Top Chewy <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-                    <p><strong>Why you might like it:</strong> A discreet chewable topper designed to fit onto a pencil, offering an alternative to chewing on clothing, fingers or other objects.</p>
-                    <p><strong>How it can be used:</strong> Handy for school, homework or quiet activities when someone finds a chewable sensory option helpful.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🟢 Squeezy Tactile Ball <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> A soft, squeezable texture that gives the hands something comfortable to do when someone needs movement or tactile input.</p>
-                    <p><strong>How it can be used:</strong> Suitable for quiet moments at home, school or care settings. Everyone responds differently, so simply see whether the texture feels comfortable and useful.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🎨 Therapy Putty <span class="setting-tag tag-school">School</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> A hands-on activity offering resistance and tactile feedback for squeezing, stretching and manipulating.</p>
-                    <p><strong>How it can be used:</strong> Useful for hands-on play, quiet fidgeting and fine-motor activities. It can also simply be an enjoyable way to keep hands busy.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🍓 Scratch & Sniff Scented Bookmark <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> Adds scent to an everyday activity, giving the senses another way to explore and engage.</p>
-                    <p><strong>How it can be used:</strong> A fun addition to reading and sensory activities. Familiar scents may also prompt memories or conversation for some people, although responses to scent are very individual.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- BOX 2: DEEP REGULATION -->
-        <section class="featured-product-card regulation-box-card">
-            <div class="product-flex">
-                <div class="product-image-box"><img src="Deep Regulation.png" alt="Deep Regulation Sensory Box"></div>
-                <div class="product-details">
-                    <span class="product-tag tag-green">Calm & Soothe</span>
-                    <h3>The Deep Regulation Box</h3>
-                    <p>A carefully chosen collection of sensory tools for moments when someone may benefit from quieter, more grounding activities and a change of sensory focus.</p>
-                    
-                    <div class="box-buy-wrapper">
-                        <div>
-                            <span class="price-badge">£32.99</span>
-                            <span class="stock-label">✓ Available to order</span>
-                        </div>
-                        <button type="button" class="snipcart-add-item"
-                            data-item-id="deep-regulation-box"
-                            data-item-name="The Deep Regulation Box"
-                            data-item-price="32.99"
-                            data-item-url="/"
-                            data-item-description="Curated collection thoughtfully gathered to aid intense emotional decompression.">
-                            Add to Basket
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <h3 class="benefits-title">💡 A little more about each item:</h3>
-            <div class="item-breakdown">
-                <div class="item-row">
-                    <h4>🌪️ Liquid Vortex Tube <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> The slow movement and changing colours offer something simple and interesting to watch.</p>
-                    <p><strong>How it can be used:</strong> A lovely option for quiet corners, sensory breaks or relaxed visual exploration. It may be particularly appealing where simple, non-verbal activities are preferred.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🎵 Sound Chime <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> Creates a clear, gentle sound that can become part of a calming routine or simply an enjoyable listening activity.</p>
-                    <p><strong>How it can be used:</strong> Try it as part of a quiet routine, listening activity or transition. Keep the sound comfortable for the person using it, particularly if they are sensitive to noise.</p>
-                </div>
-                <div class="item-row">
-                    <h4>💆 Sensory Desensitization Brush <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> Offers firm tactile input for people who enjoy predictable touch and pressure.</p>
-                    <p><strong>How it can be used:</strong> Some people enjoy firm, predictable sensory input before or during everyday activities. This type of tool isn't suitable for everyone, so follow the manufacturer's guidance and stop if it feels uncomfortable.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🍊 Scented Sensory Dough <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-                    <p><strong>Why you might like it:</strong> Combines hands-on stretching and moulding with a pleasant scent for a multi-sensory activity.</p>
-                    <p><strong>How it can be used:</strong> A fun hands-on activity for quiet play, sensory exploration or keeping hands busy.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🟢 Textured Bubble Fidget Strip <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-               <p><strong>Why you might like it:</strong> A flexible, satisfying pocket companion lined with distinct surface textures and click-free pop elements for continuous tracking.</p>
-                    <p><strong>How it helps:</strong> Perfect for a pocket or sensory bag. It gives immediate tactile sensory satisfaction during bus rides, doctor visits, or waiting rooms, serving as an effective protective buffer against environmental overload.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- BOX 3: DISCOVER THE SENSES -->
-        <section class="featured-product-card focus-box-card">
-            <div class="product-flex">
-                <div class="product-image-box"><img src="Discover the Senses.png" alt="Discover the Senses Sensory Box"></div>
-                <div class="product-details">
-                    <span class="product-tag tag-blue">Explore & Engage</span>
-                    <h3>The Discover the Senses Box</h3>
-                    <p>A collection rich in textures, lights, and sounds, beautifully designed to prompt curiosity, assist tracking, and bring absolute joy to early sensory learners and older adults alike.</p>
-                    
-                    <div class="box-buy-wrapper">
-                        <div>
-                            <span class="price-badge">£38.99</span>
-                           <span class="stock-label">✓ Available to order</span>
-                        </div>
-                       <button type="button" class="snipcart-add-item"
-                            data-item-id="discover-senses-box"
-                            data-item-name="The Discover the Senses Box"
-                            data-item-price="38.99"
-                            data-item-url="/"
-                            data-item-description="A collection rich in textures, lights, and sounds for sensory discovery.">
-                            Add to Basket
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <h3 class="benefits-title">💡 A little more about each item:</h3>
-            <div class="item-breakdown">
-                <div class="item-row">
-                    <h4>🌟 Fiber Optic Light Wand <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> Emits a soft, safe, glowing spray of lights that can be safely held and watched up close, creating gentle stimulation without glare.</p>
-                    <p><strong>How it helps:</strong> Captivates visual attention for young sensory explorers tracking movement. In senior care settings, the changing fibers offer a warm, soothing visual focus that brings comfort and calm to darker evening hours.</p>
-                </div>
-                <div class="item-row">
-                    <h4>⏳ Wooden Rainmaker Bead Tube <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> Combines a slow visual cascade of colorful beads with the realistic acoustic trickle sound of gentle rain when inverted.</p>
-                    <p><strong>How it helps:</strong> Great for sensory play, visual exploration and quiet activities. Some people may also enjoy the familiar rain-like sound and gentle movement.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🧜‍♀️ Reversible Sequin Fabric Pouch <span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></h4>
-                    <p><strong>Why you might like it:</strong> Delivers high-contrast visual and distinct physical feedback as fingers glide across the surface to flip the shifting sequin colors.</p>
-                    <p><strong>How it helps:</strong> Keeps busy hands occupied at home for hours. For older adults experiencing agitation or dementia, running hands along the scales satisfies tactile patterns, reduces repetitive plucking behaviors, and anchors focus.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🧱 Brick-Style Oral Chewy <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-                    <p><strong>Why you might like it:</strong> Features a raised block texture with a safe breakaway cord lanyard, giving substantial oral resistance safely away from clothing layers.</p>
-                    <p><strong>How it helps:</strong> Offers a reliable oral outlet for school children during intensive tasks, while acting as a grounding weight around the neck to help organize spatial body awareness.</p>
-                </div>
-                <div class="item-row">
-                    <h4>🍉 Double Fruity Scented Dough <span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></h4>
-                    <p><strong>Why you might like it:</strong> Pairs clean, highly-stretchable physical dough handling with two intense, bright fruit fragrance profiles.</p>
-                    <p><strong>How it helps:</strong> Excellent sensory exercise for motor manipulation. Smashing and rolling the dough keeps kids relaxed yet alert at their learning stations, making sensory exploration enjoyable and engaging.</p>
-                </div>
-            </div>
-        </section>
-
-        <h2 class="section-title">Individual Sensory Tools</h2>
-
-        <div class="category-subtitle">Aroma & Tactile Comforts</div>
-        <div class="product-grid">
-            <!-- Item 1: Weighted Bear -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Weighted bear.jpg" style="border-radius:12px;" alt="Grounding Weighted Bear"></div>
-                    <span class="product-tag tag-blue">Deep Pressure</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Weighted Bear</h3>
-                    <p><strong>Why you might like it:</strong> A weighted lap companion for people who enjoy the feeling of gentle, evenly distributed pressure.</p>
-                    <p><strong>Use:</strong> Can be used on the lap during quiet activities. Always follow the manufacturer's safety guidance and make sure the person can remove it easily and independently.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£19.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="weighted-bear" data-item-name="Grounding Weighted Bear" data-item-price="19.99" data-item-url="/" data-item-description="Flat, distributed laptop weight to simulate a comforting hug.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 2: Weighted Panda -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Weighted Panda.jpg" style="border-radius:12px;" alt="Grounding Weighted Panda"></div>
-                    <span class="product-tag tag-green">High Contrast</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></div>
-                    <h3>Weighted Panda</h3>
-                    <p><strong>Why you might like it:</strong> Combines a soft, high-contrast texture with gentle weight for people who enjoy tactile and visual interest.</p>
-                    <p><strong>Use:</strong> A lap companion for quiet time or sensory exploration. Whether it feels comforting will vary from person to person.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£19.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="weighted-panda" data-item-name="Grounding Weighted Panda" data-item-price="19.99" data-item-url="/" data-item-description="Bold, high-contrast plush companion for deep pressure sensory support.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 3: Lavender Memory Sachet -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Lavender.png" style="border-radius:12px;" alt="Lavender Memory Sachet"></div>
-                    <span class="product-tag tag-orange">Aromatherapy</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></div>
-                    <h3>Lavender Memory Sachet</h3>
-                    <p><strong>Why you might like it:</strong> A simple lavender scent for people who enjoy familiar, relaxing aromas.</p>
-                    <p><strong>Use:</strong> Keep nearby during quiet time or sensory activities. Familiar scents can prompt memories for some people, but scent preferences are personal.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£4.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="lavender-sachet" data-item-name="Lavender Memory Sachet" data-item-price="4.99" data-item-url="/" data-item-description="Pure botanical lavender sachet for comforting olfactory recall.">Add to Basket</button>
-                </div>
-            </div>
+  <section class="collection focus" aria-labelledby="focus-title">
+    <div class="collection-head">
+      <img src="/Focus & Flow.png" alt="Focus and Flow Sensory Box">
+      <div>
+        <span class="tag">Curated toolkit</span>
+        <h2 id="focus-title">The Focus &amp; Flow Box</h2>
+        <p>Simple sensory tools for hands-on exploration, quiet focus and moments when a little extra sensory support may be helpful.</p>
+        <div class="buy-row"><div><span class="price">£27.99</span><span class="stock-label" data-product-id="focus-flow-box">Checking availability…</span></div>
+          <button class="btn snipcart-add-item" type="button" data-item-id="focus-flow-box" data-item-name="The Focus & Flow Box" data-item-price="27.99" data-item-url="/" data-item-description="A curated collection of sensory tools for everyday focus and exploration.">Add to Basket</button>
         </div>
-
-        <div class="category-subtitle">Motor Skills & Focus Tools</div>
-        <div class="product-grid">
-            <!-- Item 4: Visual Emotion Sliding Board -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Feelings.png" style="border-radius:12px;" alt="Visual Emotion Sliding Board"></div>
-                    <span class="product-tag tag-blue">Expression</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Visual Emotion Sliding Board</h3>
-                    <p><strong>Why you might like it:</strong> A simple visual way to explore and communicate feelings without needing to find the right words straight away.</p>
-                    <p><strong>Use:</strong> Can support conversations at home, school or care settings when talking about feelings feels difficult.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£14.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="emotion-board" data-item-name="Visual Emotion Sliding Board" data-item-price="14.99" data-item-url="/" data-item-description="Tactile sliding display board that removes verbal speech pressure.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 5: Wooden Motor Screw Board -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Screw block.png" style="border-radius:12px;" alt="Wooden Motor Screw Board"></div>
-                    <span class="product-tag tag-green">Coordination</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Wooden Motor Screw Board</h3>
-                    <p><strong>Why you might like it:</strong> A hands-on, screen-free activity involving turning, gripping and exploring simple mechanisms.</p>
-                    <p><strong>Use:</strong> A satisfying activity for fine-motor practice, problem-solving or simply keeping hands busy.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£17.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="screw-board" data-item-name="Wooden Motor Screw Board" data-item-price="17.99" data-item-url="/" data-item-description="Real mechanical tasks to build hand coordination and focus.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 6: Rainbow Flat-Stone Puzzle -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Stacking pebbles.png" style="border-radius:12px;" alt="Rainbow Flat-Stone Puzzle"></div>
-                    <span class="product-tag tag-orange">Logic & Touch</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></div>
-                    <h3>Rainbow Flat-Stone Puzzle</h3>
-                    <p><strong>Why you might like it:</strong> Smooth pieces that can be stacked, sorted and explored by hand.</p>
-                    <p><strong>Use:</strong> Suitable for quiet play, sorting, stacking and simple hands-on activities at home or in learning settings.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£13.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="stone-puzzle" data-item-name="Rainbow Flat-Stone Puzzle" data-item-price="13.99" data-item-url="/" data-item-description="Smooth stackable stone shapes for visually satisfying logic matching.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 7: Zen Gel Stick Picker -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Picky Pads.png" style="border-radius:12px;" alt="Zen Gel Stick Picker"></div>
-                    <span class="product-tag tag-blue">Decompression</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Zen Gel Stick Picker</h3>
-                    <p><strong>Why you might like it:</strong> A tactile picking-style activity that gives busy hands something to explore.</p>
-                    <p><strong>Use:</strong> Can offer an alternative activity for hands that enjoy picking and pulling. It should not be described as a replacement for support around skin picking.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£9.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="gel-picker" data-item-name="Zen Gel Stick Picker" data-item-price="9.99" data-item-url="/" data-item-description="Redirects repetitive dermatological picking urges onto a safe gel pad.">Add to Basket</button>
-                </div>
-            </div>
-            <!-- Item 8: Tactile Strip -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Tactile strip.png" style="border-radius:12px;" alt="Textured Phone Grip Strips"></div>
-                    <span class="product-tag tag-green">Discreet Fidget</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Tactile Strip</h3>
-                    <p><strong>Why you might like it:</strong> Slim textured strips that add a discreet tactile surface to a phone case.</p>
-                    <p><strong>Use:</strong> Handy for discreet tactile exploration while travelling, working or waiting.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£5.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="phone-strips" data-item-name="Textured Phone Grip Strips" data-item-price="5.99" data-item-url="/" data-item-description="Slim, patterned silicone strips for completely hidden tactile grounding.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 9: Chewie Necklace -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Adult Chewie Necklace.png" style="border-radius:12px;" alt="Wearable Chewable Lanyard"></div>
-                    <span class="product-tag tag-orange">Oral Outlet</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></div>
-                    <h3>Chewie Necklace</h3>
-                    <p><strong>Why you might like it:</strong> Durable chewable beads on a breakaway cord, designed for people who find chewing a useful sensory activity.</p>
-                    <p><strong>Use:</strong> A portable option for people who choose to use chewable sensory tools during everyday activities. Always check the product's age and safety guidance.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£5.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="chew-lanyard" data-item-name="Wearable Chewable Lanyard" data-item-price="5.99" data-item-url="/" data-item-description="Chewable beads on a breakaway safety cord for sensory chewing.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 10: Dynamic Sensory Body Sock -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Body Sock.png" style="border-radius:12px;" alt="Dynamic Sensory Body Sock"></div>
-                    <span class="product-tag tag-blue">Deep Pressure</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Dynamic Sensory Body Sock 6-8 Years</h3>
-                    <p><strong>Why you might like it:</strong> Stretchy fabric that creates a close, enclosed sensory experience for people who enjoy that feeling.</p>
-                    <p><strong>Use:</strong> Can be used as a cosy, enclosed sensory activity. Always supervise appropriately and follow the manufacturer's instructions.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£36.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="body-sack" data-item-name="Dynamic Sensory Body Sack" data-item-price="36.99" data-item-url="/" data-item-description="Stretchy, breathable Lycra sack that satisfies full-body proprioception.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 11: Sensory Chewie Pen -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Chew Pen.png" style="border-radius:12px;" alt="Sensory Pen & Pencil Topper"></div>
-                    <span class="product-tag tag-orange">Oral Outlet</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span></div>
-                    <h3>Sensory Chewie Pen</h3>
-                    <p><strong>Why you might like it:</strong> A discreet silicone topper that adds a chewable sensory option to a standard.</p>
-                    <p><strong>Use:</strong> Useful during writing, homework or other seated activities where a discreet sensory option may be helpful.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£3.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="pencil-topper" data-item-name="Chewable Pen" data-item-price="3.99" data-item-url="/" data-item-description="Discreet silicone oral caps to protect standard writing instruments.">Add to Basket</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-subtitle">Visual & Interactive Mats</div>
-        <div class="product-grid">
-            <!-- Item 12: Dynamic Liquid Floor Tiles -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Smooth Tiles.jpeg" style="border-radius:12px;" alt="Dynamic Liquid Floor Tiles"></div>
-                    <span class="product-tag tag-blue">Gross Motor</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Dynamic Liquid Floor Tiles</h3>
-                    <p><strong>Why you might like it:</strong> Colour-changing panels that respond to movement, making stepping and exploring a visually engaging activity.</p>
-                    <p><strong>Use:</strong> A fun addition to movement and sensory play areas. Follow the manufacturer's guidance for safe use.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£49.99</span><span class="stock-label">✓ Available to order</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="liquid-tiles" data-item-name="Dynamic Liquid Floor Tiles" data-item-price="49.99" data-item-url="/" data-item-description="Slip-resistant cosmic gel panels that shift color with steps.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 13: Textured Sensory Wall Panels -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Textured Tiles.jpeg" style="border-radius:12px;" alt="Textured Sensory Wall Panels"></div>
-                    <span class="product-tag tag-green">Tactile Variety</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Textured Sensory Wall Panels</h3>
-                    <p><strong>Why you might like it:</strong> A variety of textures to touch, compare and explore at your own pace.</p>
-                    <p><strong>Use:</strong> Great for interactive discovery areas, quiet corners and tactile exploration across a range of settings.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£42.99</span><span class="stock-label">✓ In Stock</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="wall-panels" data-item-name="Textured Sensory Wall Panels" data-item-price="42.99" data-item-url="/" data-item-description="Six multi-texture surfaces to explore touch and anchor pacing.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 14: Visual Rainbow Countdown Clock -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Countdown timer.png" style="border-radius:12px;" alt="Visual Rainbow Countdown Clock"></div>
-                    <span class="product-tag tag-orange">Time Tracking</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Visual Rainbow Countdown Clock</h3>
-                    <p><strong>Why you might like it:</strong> A clear visual countdown that shows time passing without a ticking sound.</p>
-                    <p><strong>Use:</strong> Can make transitions and time-limited activities easier to see at home, school or in care settings.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£16.99</span><span class="stock-label">✓ In Stock</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="countdown-clock" data-item-name="Visual Rainbow Countdown Clock" data-item-price="16.99" data-item-url="/" data-item-description="Silent, non-ticking timeline disk clock to make the passing of time easier to see.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 15: Sensory Body Brush -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Sensory Brush.png" style="border-radius:12px;" alt="Deep Pressure Sensory Brush"></div>
-                    <span class="product-tag tag-blue">Desensitization</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care</span></div>
-                    <h3>Sensory Body Brush</h3>
-                    <p><strong>Why you might like it:</strong> A firm, soft-bristled brush offering predictable tactile input for people who enjoy this type of sensory experience.</p>
-                    <p><strong>Use:</strong> Some people use brushes like this as part of a sensory routine. Please follow the manufacturer's instructions and seek professional guidance if you are unsure whether it is appropriate.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£7.50</span><span class="stock-label">✓ In Stock</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="sensory-brush" data-item-name="Deep Pressure Sensory Brush" data-item-price="7.50" data-item-url="/" data-item-description="Firm, soft-bristled brush offering predictable tactile input.">Add to Basket</button>
-                </div>
-            </div>
-
-            <!-- Item 16: Sensory Resistance Bands -->
-            <div class="product-card">
-                <div>
-                    <div class="product-image-box" style="box-shadow:none; margin-bottom:15px;"><img src="Theraband.png" style="border-radius:12px;" alt="Sensory Resistance Bands"></div>
-                    <span class="product-tag tag-green">Muscle Grounding</span>
-                    <div style="margin:5px 0;"><span class="setting-tag tag-school">School</span><span class="setting-tag tag-home">Home</span><span class="setting-tag tag-care">Care Settings</span></div>
-                    <h3>Sensory Resistance Bands</h3>
-                    <p><strong>Why you might like it:</strong> Stretchy resistance that adds movement to seated activities.</p>
-                    <p><strong>Use:</strong> Can be fitted to suitable chair legs to give feet something to push or stretch against. Check the manufacturer's fitting and safety guidance.</p>
-                </div>
-                <div>
-                    <span class="price-badge">£7.50</span><span class="stock-label">✓ In Stock</span>
-                    <button type="button" class="snipcart-add-item" data-item-id="resistance-bands" data-item-name="Sensory Resistance Bands" data-item-price="7.50" data-item-url="/" data-item-description="High-stretch under-desk elastic lines for quiet active movement.">Add to Basket</button>
-                </div>
-            </div>
-        </div>
-
-       <h2 id="faqs" class="section-title">Common Questions & Gentle Answers</h2>
-        <p style="text-align: center; max-width: 600px; margin: -15px auto 40px auto; color: #556b87; font-size: 1.1rem;">
-            Everything you might want to know about our sensory tools, safety, and finding the right fit for your loved one.
-        </p>
-
-        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 60px;">
-            <div style="background: #fafdfb; border-left: 5px solid #7cc576; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02);">
-                <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🔍 I don't know what my loved one needs. Where should I start?</h4>
-                <p style="margin: 0; color: #556b87; font-size: 1.05rem;">You don't have to be an expert here. We organise our tools around everyday sensory experiences such as calm, focus, movement and tactile play. If you're unsure where to start, get in touch and tell us a little about what you're looking for. We'll do our best to point you towards options worth exploring.</p>
-            </div>
-            <div style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02); border: 1px solid #eef2f5; border-left: 5px solid #3fa9f5;">
-                <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🧸 Are the weighted plushies suitable for everyone?</h4>
-                <p style="margin: 0; color: #556b87; font-size: 1.05rem;">Weighted products aren't suitable for everyone. If you're considering a weighted item, please read the manufacturer's age, weight and safety guidance carefully, and make sure the person using it can remove it independently. If you're unsure, please seek appropriate professional advice before use.</p>
-            </div>
-            <div style="background: #fafdfb; border-left: 5px solid #7cc576; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(43, 58, 85, 0.02);">
-                <h4 style="margin: 0 0 10px 0; color: #212c42; font-size: 1.2rem;">🧼 How do I clean and care for these sensory tools?</h4>
-            <p style="margin: 0; color: #556b87; font-size: 1.05rem;">
-                Care instructions vary by product, so please follow the manufacturer's cleaning guidance supplied with each item.
-                If you're unsure about a particular product, please contact us before cleaning it.
-            </p>
-                </div>
-        </div>
-
-       <section id="contact" class="contact-card">
-            <h2>Need a little help?</h2>
-            <p>Not sure where to begin? That's completely okay. Tell us what you're hoping to support, and we'll help you explore the options we have.</p>
-            <p><a class="submit-btn" href="mailto:hello@openyoursenses.co.uk">Email Open Your Senses</a></p>
-        </section>
+      </div>
     </div>
+    <div class="item-breakdown">
+      <article class="item-row"><h4>Visual sand timers</h4><p>A silent way to see time passing and make transitions feel more predictable.</p></article>
+      <article class="item-row"><h4>Pencil-top chewy</h4><p>A chewable pencil topper offering an alternative to chewing clothing or other objects. Follow the product's age and safety guidance.</p></article>
+      <article class="item-row"><h4>Squeezy tactile ball</h4><p>A soft, squeezable texture for hands that enjoy movement or tactile input.</p></article>
+      <article class="item-row"><h4>Therapy putty</h4><p>A hands-on activity for squeezing, stretching and manipulating.</p></article>
+      <article class="item-row"><h4>Scented bookmark</h4><p>Adds a scent-based element to reading and sensory exploration. Responses to scent vary from person to person.</p></article>
+    </div>
+  </section>
 
-    <footer style="text-align:center; padding:30px 20px; color:#556b87; font-size:0.9rem;">
-    <p>&copy; 2026 Open Your Senses. Where everyone belongs.</p>
-    <p><a href="privacy.html">Privacy Policy</a> | <a href="returns.html">Returns &amp; Refunds</a></p>
+  <section class="collection regulation" aria-labelledby="reg-title">
+    <div class="collection-head">
+      <img src="/Deep Regulation.png" alt="Deep Regulation Sensory Box">
+      <div>
+        <span class="tag">Calm &amp; soothe</span>
+        <h2 id="reg-title">The Deep Regulation Box</h2>
+        <p>A considered collection of sensory tools for quieter, grounding activities and a change of sensory focus.</p>
+        <div class="buy-row"><div><span class="price">£32.99</span><span class="stock-label" data-product-id="deep-regulation-box">Checking availability…</span></div>
+          <button class="btn snipcart-add-item" type="button" data-item-id="deep-regulation-box" data-item-name="The Deep Regulation Box" data-item-price="32.99" data-item-url="/" data-item-description="A curated collection of sensory tools for quieter, grounding activities.">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+    <div class="item-breakdown">
+      <article class="item-row"><h4>Liquid vortex tube</h4><p>Slow movement and changing colours offer something simple to watch.</p></article>
+      <article class="item-row"><h4>Sound chime</h4><p>A clear sound for listening activities or a quiet routine. Keep volume comfortable for the person using it.</p></article>
+      <article class="item-row"><h4>Sensory brush</h4><p>Offers tactile input for people who enjoy predictable touch. Follow manufacturer or professional guidance and stop if uncomfortable.</p></article>
+      <article class="item-row"><h4>Scented sensory dough</h4><p>A hands-on activity combining moulding and stretching with scent exploration.</p></article>
+      <article class="item-row"><h4>Textured bubble fidget strip</h4><p>A pocket-sized tactile object for hands-on exploration during waiting or travel.</p></article>
+    </div>
+  </section>
+
+  <section class="collection discover" aria-labelledby="discover-title">
+    <div class="collection-head">
+      <img src="/Discover the Senses.png" alt="Discover the Senses Sensory Box">
+      <div>
+        <span class="tag">Explore &amp; engage</span>
+        <h2 id="discover-title">The Discover the Senses Box</h2>
+        <p>A collection of textures, lights and sounds for curiosity, exploration and shared sensory experiences.</p>
+        <div class="buy-row"><div><span class="price">£38.99</span><span class="stock-label" data-product-id="discover-senses-box">Checking availability…</span></div>
+          <button class="btn snipcart-add-item" type="button" data-item-id="discover-senses-box" data-item-name="The Discover the Senses Box" data-item-price="38.99" data-item-url="/" data-item-description="A collection of sensory tools for visual, tactile and sound exploration.">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+    <div class="item-breakdown">
+      <article class="item-row"><h4>Fibre-optic light wand</h4><p>Changing lights offer a visual focus. Use according to the manufacturer's safety guidance.</p></article>
+      <article class="item-row"><h4>Wooden rainmaker</h4><p>A gentle bead cascade and rain-like sound for visual and auditory exploration.</p></article>
+      <article class="item-row"><h4>Reversible sequin pouch</h4><p>A high-contrast surface to explore with fingers and hands.</p></article>
+      <article class="item-row"><h4>Brick-style oral chewy</h4><p>A textured chew tool. Check age suitability, inspect it before use and follow the manufacturer's safety guidance.</p></article>
+      <article class="item-row"><h4>Scented dough</h4><p>A tactile activity for stretching, rolling and exploring scent.</p></article>
+    </div>
+  </section>
+
+  <h2 class="section-title">Individual Sensory Tools</h2>
+  <p class="section-intro">Explore individual tools for tactile comfort, focus, movement, visual discovery, little explorers and rest.</p>
+
+  <div class="category-subtitle">Aroma &amp; Tactile Comforts</div>
+  <div class="product-grid">
+    <article class="product-card"><div><img src="/Weighted bear.jpg" alt="Weighted Bear"><span class="tag">Deep pressure</span><h3>Weighted Bear</h3><p>A weighted lap companion for comforting moments and quiet activities.</p></div><div class="product-bottom"><span class="price">£19.99</span><span class="stock-label" data-product-id="weighted-bear">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="weighted-bear" data-item-name="Grounding Weighted Bear" data-item-price="19.99" data-item-url="/" data-item-description="Grounding weighted bear">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Weighted Panda.jpg" alt="Weighted Panda"><span class="tag">Deep pressure</span><h3>Weighted Panda</h3><p>A soft weighted companion for cuddles, rest and quiet moments.</p></div><div class="product-bottom"><span class="price">£19.99</span><span class="stock-label" data-product-id="weighted-panda">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="weighted-panda" data-item-name="Weighted Panda" data-item-price="19.99" data-item-url="/" data-item-description="Weighted panda companion">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Lavender.png" alt="Lavender Memory Sachet"><span class="tag">Aroma &amp; memory</span><h3>Lavender Memory Sachet</h3><p>A fragrant sachet for familiar scent experiences and sensory exploration.</p></div><div class="product-bottom"><span class="price">£5.99</span><span class="stock-label" data-product-id="lavender-sachet">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="lavender-sachet" data-item-name="Lavender Memory Sachet" data-item-price="5.99" data-item-url="/" data-item-description="Lavender scented memory sachet">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Premium Fidget blanket.jpg" alt="Premium Blue Sensory Fidget Blanket"><span class="tag">Comfort &amp; memory</span><h3>Premium Blue Sensory Fidget Blanket</h3><p>A tactile blanket with different textures and details to explore with the hands.</p></div><div class="product-bottom"><span class="price">£19.99</span><span class="stock-label" data-product-id="premium-blue-fidget-blanket">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="premium-blue-fidget-blanket" data-item-name="Premium Blue Sensory Fidget Blanket" data-item-price="19.99" data-item-url="/" data-item-description="Premium blue sensory fidget blanket">Add to Basket</button></div></article>
+  </div>
+
+  <div class="category-subtitle">Motor Skills &amp; Focus Tools</div>
+  <div class="product-grid">
+    <article class="product-card"><div><img src="/Feelings.png" alt="Visual Emotion Sliding Board"><span class="tag">Focus &amp; flow</span><h3>Visual Emotion Sliding Board</h3><p>A visual tool to support conversations about feelings and emotions.</p></div><div class="product-bottom"><span class="price">£9.99</span><span class="stock-label" data-product-id="emotion-board">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="emotion-board" data-item-name="Visual Emotion Sliding Board" data-item-price="9.99" data-item-url="/" data-item-description="Visual emotion support tool">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Screw block.png" alt="Wooden Motor Screw Board"><span class="tag">Motor skills</span><h3>Wooden Motor Screw Board</h3><p>A hands-on activity for practising turning, gripping and fine motor movements.</p></div><div class="product-bottom"><span class="price">£14.99</span><span class="stock-label" data-product-id="screw-board">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="screw-board" data-item-name="Wooden Motor Screw Board" data-item-price="14.99" data-item-url="/" data-item-description="Wooden fine motor activity board">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Stacking pebbles.png" alt="Rainbow Flat-Stone Puzzle"><span class="tag">Focus &amp; creativity</span><h3>Rainbow Flat-Stone Puzzle</h3><p>A colourful puzzle for exploring patterns, problem-solving and creative play.</p></div><div class="product-bottom"><span class="price">£12.99</span><span class="stock-label" data-product-id="stone-puzzle">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="stone-puzzle" data-item-name="Rainbow Flat-Stone Puzzle" data-item-price="12.99" data-item-url="/" data-item-description="Rainbow flat stone puzzle">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Picky Pads.png" alt="Zen Gel Stick Picker"><span class="tag">Fidget &amp; focus</span><h3>Zen Gel Stick Picker</h3><p>A tactile fidget for keeping hands busy during quiet activities.</p></div><div class="product-bottom"><span class="price">£7.99</span><span class="stock-label" data-product-id="gel-picker">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="gel-picker" data-item-name="Zen Gel Stick Picker" data-item-price="7.99" data-item-url="/" data-item-description="Tactile gel stick fidget">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Tactile strip.png" alt="Tactile Strip"><span class="tag">Tactile comfort</span><h3>Tactile Strip</h3><p>A discreet textured strip for touch-based sensory exploration.</p></div><div class="product-bottom"><span class="price">£4.99</span><span class="stock-label" data-product-id="phone-strips">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="phone-strips" data-item-name="Tactile Strip" data-item-price="4.99" data-item-url="/" data-item-description="Textured tactile sensory strip">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Adult Chewie Necklace.png" alt="Chewie Necklace"><span class="tag">Oral sensory</span><h3>Chewie Necklace</h3><p>A wearable chew tool for people who prefer oral sensory input. Use with appropriate supervision.</p></div><div class="product-bottom"><span class="price">£8.99</span><span class="stock-label" data-product-id="chew-lanyard">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="chew-lanyard" data-item-name="Chewie Necklace" data-item-price="8.99" data-item-url="/" data-item-description="Wearable oral sensory chew tool">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Body Sock.png" alt="Dynamic Sensory Body Sock"><span class="tag">Movement &amp; deep pressure</span><h3>Dynamic Sensory Body Sock</h3><p>A stretch-fabric activity aid for supervised movement and body-awareness activities.</p></div><div class="product-bottom"><span class="price">£19.99</span><span class="stock-label" data-product-id="body-sack">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="body-sack" data-item-name="Dynamic Sensory Body Sock" data-item-price="19.99" data-item-url="/" data-item-description="Stretch sensory body sock">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Chew Pen.png" alt="Sensory Chewie Pen"><span class="tag">Oral sensory</span><h3>Sensory Chewie Pen</h3><p>A pen-style sensory tool designed for people who prefer oral input. Follow product safety guidance.</p></div><div class="product-bottom"><span class="price">£6.99</span><span class="stock-label" data-product-id="sensory-chewie-pen">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="sensory-chewie-pen" data-item-name="Sensory Chewie Pen" data-item-price="6.99" data-item-url="/" data-item-description="Sensory chew pen">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Glitter wands.jfif" alt="Set of 4 Glitter Wands"><span class="tag">Discover the senses</span><h3>Playlearn Set of 4 Glitter Wands</h3><p>Colourful glitter wands for visual tracking and sensory exploration.</p></div><div class="product-bottom"><span class="price">£8.99</span><span class="stock-label" data-product-id="playlearn-glitter-wands">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="playlearn-glitter-wands" data-item-name="Playlearn Set of 4 Glitter Wands" data-item-price="8.99" data-item-url="/" data-item-description="Set of four glitter sensory wands">Add to Basket</button></div></article>
+  </div>
+
+  <div class="category-subtitle">Visual &amp; Interactive Mats</div>
+  <div class="product-grid">
+    <article class="product-card"><div><img src="/Dynamic Liquid Floor Tiles.jpeg" alt="Dynamic Liquid Floor Tiles"><span class="tag">Visual &amp; tactile</span><h3>Dynamic Liquid Floor Tiles</h3><p>Colourful interactive tiles that respond to movement and invite visual and tactile exploration.</p></div><div class="product-bottom"><span class="price">£24.99</span><span class="stock-label" data-product-id="liquid-tiles">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="liquid-tiles" data-item-name="Dynamic Liquid Floor Tiles" data-item-price="24.99" data-item-url="/" data-item-description="Interactive liquid sensory floor tiles">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Textured Sensory Wall Panels.jpeg" alt="Textured Sensory Wall Panels"><span class="tag">Touch &amp; explore</span><h3>Textured Sensory Wall Panels</h3><p>Textured surfaces for hands-on exploration and touch-based activities.</p></div><div class="product-bottom"><span class="price">£19.99</span><span class="stock-label" data-product-id="wall-panels">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="wall-panels" data-item-name="Textured Sensory Wall Panels" data-item-price="19.99" data-item-url="/" data-item-description="Textured sensory wall panels">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Countdown timer.png" alt="Visual Rainbow Countdown Clock"><span class="tag">Visual routine</span><h3>Visual Rainbow Countdown Clock</h3><p>A colourful visual timer to help make the passing of time easier to understand.</p></div><div class="product-bottom"><span class="price">£14.99</span><span class="stock-label" data-product-id="countdown-clock">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="countdown-clock" data-item-name="Visual Rainbow Countdown Clock" data-item-price="14.99" data-item-url="/" data-item-description="Visual rainbow countdown timer">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Sensory Brush.png" alt="Sensory Body Brush"><span class="tag">Tactile comfort</span><h3>Sensory Body Brush</h3><p>A sensory brush for tactile exploration, used in line with appropriate guidance.</p></div><div class="product-bottom"><span class="price">£5.99</span><span class="stock-label" data-product-id="sensory-brush">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="sensory-brush" data-item-name="Sensory Body Brush" data-item-price="5.99" data-item-url="/" data-item-description="Sensory body brush">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Theraband.png" alt="Sensory Resistance Bands"><span class="tag">Movement &amp; focus</span><h3>Sensory Resistance Bands</h3><p>Resistance bands for movement breaks and supervised movement activities.</p></div><div class="product-bottom"><span class="price">£8.99</span><span class="stock-label" data-product-id="sensory-resistance-bands">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="sensory-resistance-bands" data-item-name="Sensory Resistance Bands" data-item-price="8.99" data-item-url="/" data-item-description="Sensory resistance bands">Add to Basket</button></div></article>
+  </div>
+
+  <div class="category-subtitle">Little Explorers</div>
+  <div class="product-grid">
+    <article class="product-card"><div><img src="/Dummy Clip.png" alt="Pink Dummy Clip"><span class="tag">Little explorers</span><h3>Pink Dummy Clip</h3><p>A practical accessory to help keep baby's dummy close at hand. Follow manufacturer safety instructions.</p></div><div class="product-bottom"><span class="price">£5.99</span><span class="stock-label" data-product-id="pink-dummy-clip">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="pink-dummy-clip" data-item-name="Pink Dummy Clip" data-item-price="5.99" data-item-url="/" data-item-description="Pink dummy clip">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Dummy Clip.png" alt="Blue Dummy Clip"><span class="tag">Little explorers</span><h3>Blue Dummy Clip</h3><p>A practical accessory to help keep baby's dummy close at hand. Follow manufacturer safety instructions.</p></div><div class="product-bottom"><span class="price">£5.99</span><span class="stock-label" data-product-id="blue-dummy-clip">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="blue-dummy-clip" data-item-name="Blue Dummy Clip" data-item-price="5.99" data-item-url="/" data-item-description="Blue dummy clip">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/Highland Cow dummy clip.png" alt="Highland Cow Dummy Clip"><span class="tag">Little explorers</span><h3>Highland Cow Dummy Clip</h3><p>A character-themed dummy clip accessory. Follow manufacturer safety instructions.</p></div><div class="product-bottom"><span class="price">£6.99</span><span class="stock-label" data-product-id="highland-cow-dummy-clip">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="highland-cow-dummy-clip" data-item-name="Highland Cow Dummy Clip" data-item-price="6.99" data-item-url="/" data-item-description="Highland cow dummy clip">Add to Basket</button></div></article>
+  </div>
+
+  <div class="category-subtitle">Rest &amp; Restore</div>
+  <div class="product-grid">
+    <article class="product-card"><div><img src="/Night Light.avif" alt="LED Night Light"><span class="tag">Rest &amp; restore</span><h3>LED Night Light</h3><p>A gentle light to help create a soothing atmosphere for bedtime or quiet moments.</p></div><div class="product-bottom"><span class="price">£12.99</span><span class="stock-label" data-product-id="led-night-light">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="led-night-light" data-item-name="LED Night Light" data-item-price="12.99" data-item-url="/" data-item-description="LED sensory night light">Add to Basket</button></div></article>
+    <article class="product-card"><div><img src="/White Noise.jpg" alt="Portable White Noise Machine"><span class="tag">Rest &amp; restore</span><h3>Portable White Noise Machine</h3><p>A portable sound machine for a consistent background sound during rest or quiet time.</p></div><div class="product-bottom"><span class="price">£16.99</span><span class="stock-label" data-product-id="portable-white-noise-machine">Checking availability…</span><button class="btn snipcart-add-item" type="button" data-item-id="portable-white-noise-machine" data-item-name="Portable White Noise Machine" data-item-price="16.99" data-item-url="/" data-item-description="Portable white noise machine">Add to Basket</button></div></article>
+  </div>
+
+  <h2 id="faqs" class="section-title">Common Questions &amp; Gentle Answers</h2>
+  <div class="faq-list">
+    <article class="faq"><h3>I don't know what my loved one needs. Where should I start?</h3><p>You don't have to be an expert. Explore tools around everyday sensory experiences such as calm, focus, movement and tactile play. If you're unsure, get in touch and we'll do our best to point you towards options worth exploring.</p></article>
+    <article class="faq"><h3>Are weighted plushies suitable for everyone?</h3><p>Weighted products aren't suitable for everyone. Read the manufacturer's age, weight and safety guidance carefully and ensure the person can remove the item independently. If unsure, seek appropriate professional advice.</p></article>
+    <article class="faq"><h3>How do I clean and care for sensory tools?</h3><p>Care instructions vary by product. Follow the manufacturer's cleaning guidance supplied with each item, and contact us if you're unsure.</p></article>
+    <article class="faq"><h3>How can I ask for help?</h3><p>Email us with a little information about what you're looking for. We can help you explore the options available, though every person's sensory preferences are different.</p></article>
+  </div>
+
+  <section id="contact" class="panel contact">
+    <h2>Need a little help?</h2>
+    <p>Not sure where to begin? That's completely okay. Tell us what you're hoping to support, and we'll help you explore the options we have.</p>
+    <a class="btn" href="mailto:hello@openyoursenses.co.uk">Email Open Your Senses</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Open Your Senses. Where everyone belongs.</p>
+  <p><a href="/privacy.html">Privacy Policy</a> | <a href="/returns.html">Returns &amp; Refunds</a></p>
 </footer>
+
+<div hidden id="snipcart" data-api-key="ODZiMWU5ZjYtNzFkNC00NGFkLWJmOWUtODVhZDkyZmRlMzk0NjM5MjY5MjE2MjQ3ODY3MTc0" data-config-currency="gbp"></div>
 <script>
-async function updateStockLabels() {
-  const labels = document.querySelectorAll('.stock-label');
-
-  try {
-    const response = await fetch('/api/stock');
-
-    if (!response.ok) {
-      throw new Error('Stock check unavailable');
-    }
-
-    const data = await response.json();
-
-    document.querySelectorAll('.snipcart-add-item').forEach(button => {
-      const productId = button.getAttribute('data-item-id');
-      const product = data.products.find(item =>
-        item.userDefinedId === productId || item.id === productId
-      );
-
-      const card = button.closest('.product-details')
-        || button.closest('.product-card')
-        || button.closest('section');
-
-      const label = card?.querySelector('.stock-label');
-
-      if (!label) return;
-
-      if (!product || typeof product.stock !== 'number') {
-        label.textContent = 'Stock status unavailable';
-        return;
-      }
-
-      if (product.stock > 0) {
-        label.textContent = '✓ In Stock';
-      } else {
-        label.textContent = '⚠ Out of Stock';
+async function updateStockLabels(){
+  const labels=[...document.querySelectorAll('.stock-label')];
+  if(!labels.length)return;
+  try{
+    const response=await fetch('/api/stock',{cache:'no-store'});
+    if(!response.ok)throw new Error('Stock endpoint returned '+response.status);
+    const data=await response.json();
+    const products=Array.isArray(data.products)?data.products:[];
+    labels.forEach(label=>{
+      const id=label.dataset.productId;
+      const product=products.find(item=>item.userDefinedId===id||item.id===id);
+      if(!product||typeof product.stock!=='number'){
+        label.textContent='Availability check unavailable';
+        label.classList.add('unknown');
+      }else if(product.stock>0){
+        label.textContent='✓ In stock';
+        label.classList.remove('out','unknown');
+      }else{
+        label.textContent='⚠ Out of stock';
+        label.classList.add('out');
+        label.classList.remove('unknown');
       }
     });
-  } catch (error) {
-    labels.forEach(label => {
-      label.textContent = 'Stock status unavailable';
+  }catch(error){
+    labels.forEach(label=>{
+      label.textContent='Availability check unavailable';
+      label.classList.add('unknown');
     });
   }
 }
-
-document.addEventListener('DOMContentLoaded', updateStockLabels);
+document.addEventListener('DOMContentLoaded',updateStockLabels);
 </script>
 </body>
 </html>
