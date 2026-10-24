@@ -163,8 +163,18 @@
         <h2 id="discover-title">The Discover the Senses Box</h2>
         <p>A collection of textures, lights and sounds for curiosity, exploration and shared sensory experiences.</p>
         <div class="buy-row"><div><span class="price">£38.99</span><span class="stock-label" data-product-id="discover-senses-box">Checking availability…</span></div>
-          <button class="btn snipcart-add-item" type="button" data-item-id="discover-senses-box" data-item-name="The Discover the Senses Box" data-item-price="38.99" data-item-url="/" data-item-description="A collection of sensory tools for visual, tactile and sound exploration.">Add to Basket</button>
-        </div>
+         <button class="btn snipcart-add-item" type="button"
+  data-item-id="discover-senses-box"
+  data-item-name="The Discover the Senses Box"
+  data-item-price="38.99"
+  data-item-url="/"
+  data-item-description="A collection of sensory tools for visual, tactile and sound exploration."
+  data-item-custom1-name="Chosen extra items"
+  data-item-custom1-type="readonly"
+  data-item-custom1-value="Please choose your extras"
+  onclick="return prepareDiscoverExtras()">
+  Add to Basket
+</button>  </div>
       </div>
     </div>
     <div class="item-breakdown">
@@ -174,11 +184,61 @@
       <article class="item-row"><h4>Brick-style oral chewy</h4><p>A textured chew tool. Check age suitability, inspect it before use and follow the manufacturer's safety guidance.</p></article>
       <article class="item-row"><h4>Scented dough</h4><p>A tactile activity for stretching, rolling and exploring scent.</p></article>
     </div>
-        <div class="item-breakdown discover-extras">
-      <h3>Make Your Box Your Own</h3>
-      <p>Choose one extra item priced at £7.00 or more, or choose two extras priced under £7.00 each.</p>
-      <p><strong>Extra-item choices are coming next.</strong></p>
-    </div>
+           <div class="item-breakdown discover-extras">
+  <h3>Make Your Box Your Own</h3>
+  <p>Choose your extra sensory items to personalise your box.</p>
+
+  <label for="discover-choice">
+    <strong>How would you like to personalise your box?</strong>
+  </label>
+  <select id="discover-choice">
+    <option value="">Please choose an option</option>
+    <option value="one">One extra item (£7.00 or more)</option>
+    <option value="two">Two extra items (each under £7.00)</option>
+  </select>
+
+  <div id="discover-one-extra" hidden>
+    <label for="discover-extra-one">Choose your extra item</label>
+    <select id="discover-extra-one">
+      <option value="">Choose one item</option>
+      <option value="Visual Emotion Sliding Board">Visual Emotion Sliding Board — £9.99</option>
+      <option value="Zen Gel Stick Picker">Zen Gel Stick Picker — £7.99</option>
+      <option value="Chewie Necklace">Chewie Necklace — £8.99</option>
+      <option value="Playlearn Set of 4 Glitter Wands">Glitter Wands — £8.99</option>
+      <option value="Sensory Resistance Bands">Sensory Resistance Bands — £8.99</option>
+    </select>
+  </div>
+
+  <div id="discover-two-extras" hidden>
+    <label for="discover-extra-two-a">First extra item</label>
+    <select id="discover-extra-two-a">
+      <option value="">Choose first item</option>
+      <option value="Tactile Strip">Tactile Strip — £4.99</option>
+      <option value="Lavender Memory Sachet">Lavender Memory Sachet — £5.99</option>
+      <option value="Sensory Body Brush">Sensory Body Brush — £5.99</option>
+      <option value="Pink Dummy Clip">Pink Dummy Clip — £5.99</option>
+      <option value="Blue Dummy Clip">Blue Dummy Clip — £5.99</option>
+      <option value="Sensory Chewie Pen">Sensory Chewie Pen — £6.99</option>
+      <option value="Highland Cow Dummy Clip">Highland Cow Dummy Clip — £6.99</option>
+    </select>
+
+    <label for="discover-extra-two-b">Second extra item</label>
+    <select id="discover-extra-two-b">
+      <option value="">Choose second item</option>
+      <option value="Tactile Strip">Tactile Strip — £4.99</option>
+      <option value="Lavender Memory Sachet">Lavender Memory Sachet — £5.99</option>
+      <option value="Sensory Body Brush">Sensory Body Brush — £5.99</option>
+      <option value="Pink Dummy Clip">Pink Dummy Clip — £5.99</option>
+      <option value="Blue Dummy Clip">Blue Dummy Clip — £5.99</option>
+      <option value="Sensory Chewie Pen">Sensory Chewie Pen — £6.99</option>
+      <option value="Highland Cow Dummy Clip">Highland Cow Dummy Clip — £6.99</option>
+    </select>
+  </div>
+
+  <p id="discover-choice-message" aria-live="polite">
+    Your chosen extras will be included with your box.
+  </p>
+</div>
   </section>
   
   <h2 class="section-title">Individual Sensory Tools</h2>
@@ -277,10 +337,103 @@ async function updateStockLabels(){
     labels.forEach(label=>{
       label.textContent='Availability check unavailable';
       label.classList.add('unknown');
-    });
+       });
   }
 }
 document.addEventListener('DOMContentLoaded',updateStockLabels);
 </script>
+ 
+<script>
+function prepareDiscoverExtras() {
+  const choice = document.getElementById('discover-choice');
+  const one = document.getElementById('discover-extra-one');
+  const twoA = document.getElementById('discover-extra-two-a');
+  const twoB = document.getElementById('discover-extra-two-b');
+  const button = document.querySelector(
+    '[data-item-id="discover-senses-box"]'
+  );
+
+  if (!choice || !button) return false;
+
+  let selected = [];
+
+  if (choice.value === 'one') {
+    if (!one || !one.value) {
+      alert('Please choose one extra item for your box.');
+      return false;
+    }
+    selected = [one.options[one.selectedIndex].text];
+  } else if (choice.value === 'two') {
+    if (!twoA || !twoB || !twoA.value || !twoB.value) {
+      alert('Please choose both extra items for your box.');
+      return false;
+    }
+    if (twoA.value === twoB.value) {
+      alert('Please choose two different extra items.');
+      return false;
+    }
+    selected = [
+      twoA.options[twoA.selectedIndex].text,
+      twoB.options[twoB.selectedIndex].text
+    ];
+  } else {
+    alert('Please choose how you would like to personalise your box.');
+    return false;
+  }
+
+  button.setAttribute(
+    'data-item-custom1-value',
+    selected.join(' + ')
+  );
+
+  return true;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const choice = document.getElementById('discover-choice');
+  const one = document.getElementById('discover-one-extra');
+  const two = document.getElementById('discover-two-extras');
+  const oneSelect = document.getElementById('discover-extra-one');
+  const twoA = document.getElementById('discover-extra-two-a');
+  const twoB = document.getElementById('discover-extra-two-b');
+  const button = document.querySelector(
+    '[data-item-id="discover-senses-box"]'
+  );
+
+  if (!choice || !one || !two || !button) return;
+
+  function updateExtras() {
+    one.hidden = choice.value !== 'one';
+    two.hidden = choice.value !== 'two';
+
+    let selected = [];
+
+    if (choice.value === 'one' && oneSelect && oneSelect.value) {
+      selected = [oneSelect.options[oneSelect.selectedIndex].text];
+    }
+
+    if (choice.value === 'two' && twoA && twoB &&
+        twoA.value && twoB.value && twoA.value !== twoB.value) {
+      selected = [
+        twoA.options[twoA.selectedIndex].text,
+        twoB.options[twoB.selectedIndex].text
+      ];
+    }
+
+    button.setAttribute(
+      'data-item-custom1-value',
+      selected.length ? selected.join(' + ') : 'Please choose your extras'
+    );
+  }
+
+  choice.addEventListener('change', updateExtras);
+  if (oneSelect) oneSelect.addEventListener('change', updateExtras);
+  if (twoA) twoA.addEventListener('change', updateExtras);
+  if (twoB) twoB.addEventListener('change', updateExtras);
+
+  updateExtras();
+});
+</script>
+
 </body>
 </html>
