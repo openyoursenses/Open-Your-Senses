@@ -13,7 +13,7 @@ export async function onRequestGet({ env }) {
     const credentials = btoa(`${secret}:`);
 
     const response = await fetch(
-      "https://app.snipcart.com/api/products",
+    "https://app.snipcart.com/api/products?limit=100&offset=0",
       {
         method: "GET",
         headers: {
