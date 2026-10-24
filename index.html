@@ -268,6 +268,7 @@ async function updateStockLabels(){
       }
     });
   }catch(error){
+    console.error('Stock check failed:', error);
     labels.forEach(label=>{
       label.textContent='Availability check unavailable';
       label.classList.add('unknown');
